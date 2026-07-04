@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#65a30d">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -8,18 +8,18 @@
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-<title>校園生活英語 · 上學開口說</title>
+<title>校園生活英語</title>
 
 <style>
 :root{
-  --sky:#65a30d; --sky2:#89b947; --sky3:#aecf81; --deep:#487509;
-  --bg:#f0f9ff; --card:#ffffff; --ink:#0f172a; --sub:#64748b; --line:#e2e8f0;
-  --good:#10b981; --bad:#ef4444; --gold:#f59e0b; --sos:#e11d48; --shadow:0 6px 22px rgba(2,132,199,.12);
+  --sky:#65a30d; --sky2:#84cc16; --sky3:#bef264; --deep:#4d7c0f;
+  --bg:#f7fee7; --card:#ffffff; --ink:#0f172a; --sub:#64748b; --line:#e2e8f0;
+  --good:#10b981; --bad:#ef4444; --gold:#f59e0b; --sos:#e11d48; --shadow:0 6px 22px rgba(0,0,0,.12);
   --r:18px; --fs:1;
 }
 html[data-theme=dark]{
   --bg:#0b1220; --card:#131c2e; --ink:#e8eefc; --sub:#94a3b8; --line:#233047;
-  --sky:#93be55; --deep:#b9d592; --shadow:0 6px 22px rgba(0,0,0,.4);
+  --sky:#84cc16; --deep:#bef264; --shadow:0 6px 22px rgba(0,0,0,.4);
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;height:100%}
@@ -35,7 +35,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .hidden{display:none!important}
 
 .topbar{position:sticky;top:0;z-index:40;background:linear-gradient(135deg,var(--sky),var(--sky2));
-  color:#fff;padding:calc(env(safe-area-inset-top) + 12px) 0 12px;box-shadow:0 4px 16px rgba(2,132,199,.25)}
+  color:#fff;padding:calc(env(safe-area-inset-top) + 12px) 0 12px;box-shadow:0 4px 16px rgba(0,0,0,.25)}
 .topbar .row,.topbar .stats{max-width:640px;width:100%;margin-left:auto;margin-right:auto;padding-left:14px;padding-right:14px;box-sizing:border-box}
 .topbar .row{display:flex;align-items:center;gap:10px}
 .topbar h1{font-size:1.2rem;font-weight:800;letter-spacing:.5px;flex:1}
@@ -91,7 +91,7 @@ html[data-theme=dark] .banner.sos{background:linear-gradient(135deg,#3a1220,#2a0
 .pitem .en{font-weight:700;font-size:.97rem;line-height:1.35}
 .pitem .zh{color:var(--sub);font-size:.85rem;margin-top:3px}
 .pitem .homo{color:var(--sos);font-size:.8rem;margin-top:2px;font-weight:600}
-.pitem .tip{color:var(--sky);font-size:.75rem;margin-top:4px;background:rgba(101,163,13,.08);padding:3px 8px;border-radius:8px;display:inline-block}
+.pitem .tip{color:var(--sky);font-size:.75rem;margin-top:4px;background:rgba(14,165,233,.08);padding:3px 8px;border-radius:8px;display:inline-block}
 .pitem .metarow{display:flex;gap:6px;align-items:center;margin-top:5px;flex-wrap:wrap}
 .lv{font-size:.62rem;font-weight:800;padding:2px 6px;border-radius:6px;color:#fff}
 .lv1{background:#22c55e}.lv2{background:#f59e0b}.lv3{background:#ef4444}
@@ -105,6 +105,43 @@ html[data-theme=dark] .banner.sos{background:linear-gradient(135deg,#3a1220,#2a0
 .misschip{background:rgba(239,68,68,.1);color:var(--bad);border:1px solid var(--bad);border-radius:9px;padding:3px 9px;margin:3px 3px 0;font-size:.8rem;font-weight:700;display:inline-block}
 .fbnote{font-size:.72rem;opacity:.68;margin-top:7px;line-height:1.4}
 .keyok{color:var(--good);font-weight:700}
+.primcta{display:flex;gap:10px;margin:12px 0 4px}
+.primbtn{flex:1;background:linear-gradient(135deg,var(--sky),var(--sky2));color:#fff;font-weight:800;font-size:1.05rem;padding:15px 10px;border-radius:16px;box-shadow:var(--shadow)}
+.primbtn.ghost2{background:var(--card);color:var(--sky);border:1.5px solid var(--sky)}
+.modehint{font-size:.76rem;color:var(--sub);margin:10px 4px 4px;line-height:1.4}
+.bigshow{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;gap:18px}
+.bigshow .ben{font-size:2.1rem;font-weight:800;line-height:1.35}
+.bigshow .bzh{font-size:1.15rem;color:var(--sub)}
+.bigshow .bhomo{font-size:1.05rem;color:var(--sos);font-weight:700}
+.bigshow .tello{font-size:.8rem;color:var(--sub);background:rgba(14,165,233,.1);padding:6px 12px;border-radius:10px}
+.banner.trip{background:linear-gradient(135deg,#eef2ff,#e0e7ff);border-color:#c7d2fe}
+html[data-theme=dark] .banner.trip{background:linear-gradient(135deg,#1a1f3a,#141830);border-color:#2a3160}
+.banner.trip .go{background:#6366f1}
+.wzq{font-weight:800;font-size:.98rem;margin:16px 4px 8px}.wzq small{font-weight:400;color:var(--sub);font-size:.8rem}
+.wzin{width:100%;padding:13px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font-size:1rem;font-family:inherit}
+.wzchips{display:flex;flex-wrap:wrap;gap:8px}
+.wzchip{padding:10px 13px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font-size:.9rem;font-weight:700}
+.wzchip.on{background:var(--sky);color:#fff;border-color:transparent}
+.cheatsc{font-weight:800;font-size:.9rem;color:var(--sky);margin:16px 4px 8px;border-bottom:2px solid var(--line);padding-bottom:5px}
+.cheatrow{display:flex;align-items:center;gap:10px;background:var(--card);border-radius:12px;padding:11px 13px;margin-bottom:7px;box-shadow:var(--shadow)}
+.cheatrow .cen{font-weight:700;font-size:.98rem;line-height:1.35}
+.cheatrow .czh{color:var(--sub);font-size:.82rem;margin-top:2px}
+.primbtn.kid{background:linear-gradient(135deg,#f472b6,#fb923c)}
+.kggrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+.kgopt{background:var(--card);border-radius:18px;padding:18px 8px;box-shadow:var(--shadow);border:2px solid transparent;transition:transform .1s}
+.kgopt:active{transform:scale(.95)}
+.kgico{font-size:52px;line-height:1}
+.kgzh{font-size:.9rem;font-weight:700;margin-top:8px;color:var(--sub)}
+.kgopt.kgok{border-color:var(--good);background:rgba(16,185,129,.12)}
+.kgopt.kgbad{border-color:var(--bad);animation:shake .3s}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.stickerbook{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:10px;margin-top:6px}
+.stik{background:var(--card);border-radius:14px;box-shadow:var(--shadow);aspect-ratio:1;display:grid;place-items:center;font-size:34px}
+.lostcard{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:24px;gap:16px}
+.lostcard .lem{font-size:56px}
+.lostcard .len{font-size:1.7rem;font-weight:800;line-height:1.4}
+.lostcard .lzh{font-size:1.05rem;color:var(--sub)}
+.lostcard .lphone{font-size:1.5rem;font-weight:800;color:var(--sos);letter-spacing:1px}
 
 .tagbar{display:flex;gap:7px;overflow-x:auto;padding:4px 2px 10px;-webkit-overflow-scrolling:touch}
 .tagbar::-webkit-scrollbar{display:none}
@@ -137,7 +174,7 @@ html[data-theme=dark] .banner.sos{background:linear-gradient(135deg,#3a1220,#2a0
 .flash .big-en{font-size:1.6rem;font-weight:800;line-height:1.35}
 .flash .big-zh{font-size:1.2rem;color:var(--sub)}
 .flash .homo2{font-size:1rem;color:var(--sos);font-weight:700}
-.flash .tip2{font-size:.85rem;color:var(--sky);background:rgba(101,163,13,.08);padding:7px 12px;border-radius:10px}
+.flash .tip2{font-size:.85rem;color:var(--sky);background:rgba(14,165,233,.08);padding:7px 12px;border-radius:10px}
 .flash .wico{font-size:56px}
 .speak{background:linear-gradient(135deg,var(--sky),var(--sky2));color:#fff;border-radius:99px;padding:12px 22px;font-weight:800;font-size:.95rem;display:inline-flex;gap:8px;align-items:center;box-shadow:var(--shadow)}
 .tapkuce{color:var(--sub);font-size:.82rem}
@@ -152,7 +189,7 @@ html[data-theme=dark] .banner.sos{background:linear-gradient(135deg,#3a1220,#2a0
 .teach{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:16px;margin-top:6px;border-left:4px solid var(--sky);animation:pop .2s}
 .teach .r{margin:5px 0;font-size:.95rem}
 .teach .r.wrong{color:var(--bad)}.teach .r.right{color:var(--good);font-weight:800}
-.teach .tipbox{background:rgba(101,163,13,.08);color:var(--sky);border-radius:10px;padding:9px 12px;margin-top:8px;font-size:.85rem}
+.teach .tipbox{background:rgba(14,165,233,.08);color:var(--sky);border-radius:10px;padding:9px 12px;margin-top:8px;font-size:.85rem}
 
 .scz-target{min-height:60px;background:var(--card);border:2px dashed var(--line);border-radius:14px;padding:12px;display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start;margin-bottom:6px}
 .scz-target.err{border-color:var(--bad);animation:shake .35s}
@@ -163,7 +200,7 @@ html[data-theme=dark] .banner.sos{background:linear-gradient(135deg,#3a1220,#2a0
 .tok.inpool{background:var(--card);color:var(--ink);border:1px solid var(--line);box-shadow:none}
 
 .mic-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center}
-.mic{width:92px;height:92px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--sky2));color:#fff;font-size:38px;display:grid;place-items:center;box-shadow:0 10px 30px rgba(101,163,13,.4);transition:transform .15s}
+.mic{width:92px;height:92px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--sky2));color:#fff;font-size:38px;display:grid;place-items:center;box-shadow:0 10px 30px rgba(14,165,233,.4);transition:transform .15s}
 .mic.rec{animation:pulse 1s infinite;background:linear-gradient(135deg,var(--bad),#f87171)}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
 .heard{font-size:.9rem;color:var(--sub);min-height:22px}
@@ -194,10 +231,10 @@ html[data-theme=dark] .banner.sos{background:linear-gradient(135deg,#3a1220,#2a0
 
 .prof{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
 .pill{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:11px 16px;font-weight:800;font-size:.95rem;display:flex;align-items:center;gap:8px}
-.pill.on{border-color:var(--sky);color:var(--sky);background:rgba(101,163,13,.08)}
+.pill.on{border-color:var(--sky);color:var(--sky);background:rgba(14,165,233,.08)}
 .bandsel{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:8px 0}
 .bandopt{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:12px;text-align:left;box-shadow:var(--shadow)}
-.bandopt.on{border-color:var(--sky);background:rgba(101,163,13,.06)}
+.bandopt.on{border-color:var(--sky);background:rgba(14,165,233,.06)}
 .bandopt b{font-size:.95rem}.bandopt small{display:block;color:var(--sub);font-size:.72rem;margin-top:3px;line-height:1.3}
 .setrow{background:var(--card);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .setrow .lab b{font-size:.95rem}.setrow .lab small{color:var(--sub);font-size:.78rem;display:block;margin-top:2px}
@@ -257,8 +294,8 @@ html[data-theme=dark] .banner.sos{background:linear-gradient(135deg,#3a1220,#2a0
 <div id="view-sos" class="wrap hidden"></div>
 
 <div id="view-search" class="wrap hidden">
-  <div class="section-title">🔎 全句庫搜尋（隨時查用）</div>
-  <input class="searchbox" id="searchInput" placeholder="輸入中文或英文，例：借我、good morning" oninput="doSearch(this.value)">
+  <div class="section-title">🔎 全句庫搜尋（隨查隨用）</div>
+  <input class="searchbox" id="searchInput" placeholder="輸入中文或英文，例：退稅、window seat" oninput="doSearch(this.value)">
   <div id="searchRes" style="margin-top:12px"></div>
 </div>
 
@@ -307,35 +344,8 @@ html[data-theme=dark] .banner.sos{background:linear-gradient(135deg,#3a1220,#2a0
 <div id="overlayMount"></div>
 
 <script id="REF">
-window.__REF__ = {
-  emergency:[
-    {flag:"🇹🇼",c:"台灣海外急難",police:"+886-800-085-095",amb:"外交部急難救助專線（國外免付費 800-0885-0885）"},
-    {flag:"🇺🇸",c:"美國/加拿大",police:"911",amb:"911（警消救護同號）"},
-    {flag:"🇯🇵",c:"日本",police:"110",amb:"119（火警與救護）"},
-    {flag:"🇰🇷",c:"南韓",police:"112",amb:"119"},
-    {flag:"🇬🇧",c:"英國",police:"999",amb:"999 或 112"},
-    {flag:"🇪🇺",c:"歐盟通用",police:"112",amb:"112（全歐通用）"},
-    {flag:"🇦🇺",c:"澳洲/紐西蘭",police:"000",amb:"000（紐西蘭 111）"},
-    {flag:"🇹🇭",c:"泰國",police:"191",amb:"1669；觀光警察 1155"},
-    {flag:"🇸🇬",c:"新加坡",police:"999",amb:"995"},
-    {flag:"🇨🇳",c:"中國大陸",police:"110",amb:"120"}
-  ],
-  tipping:[
-    {flag:"🇺🇸",c:"美國 / 加拿大",t:"幾乎都要給。餐廳 18–22%、計程車/Uber 15%、房務每天 $2–5、行李員每件 $1–2。刷卡在帳單加，付現桌上留。"},
-    {flag:"🇯🇵",c:"日本",t:"⚠️ 不用給小費！給了對方會困惑甚至覺得失禮，服務費通常已含在帳單。追出來還你別驚訝。"},
-    {flag:"🇪🇺",c:"歐洲多數國家",t:"帳單多已含 service charge，不必再加 20%。湊整數或加 5–10% 即可，用美式習慣會多花冤枉錢。"},
-    {flag:"🇬🇧",c:"英國",t:"餐廳約 10–15%（先看帳單是否已含 service charge），酒吧點酒不用給。"},
-    {flag:"🇹🇼",c:"台灣 / 南韓",t:"一般不給小費，餐廳多已收 10% 服務費。"},
-    {flag:"🇹🇭",c:"泰國 / 東南亞",t:"非必要，小額即可（20–50 泰銖、找零的零錢）。高級餐廳看帳單是否已含。"}
-  ]
-};
-</script>
-
-<script id="DATA">
-window.__SCENARIOS__ = [{"id": "self-intro", "icon": "🙋", "title": "自我介紹", "titleEn": "Introducing Yourself", "desc": "開學認識新同學，介紹自己的名字、班級和興趣", "words": [{"en": "name", "zh": "名字", "ico": "📛"}, {"en": "grade", "zh": "年級", "ico": "🔢"}, {"en": "class", "zh": "班級", "ico": "🏫"}, {"en": "hobby", "zh": "嗜好", "ico": "🎨"}, {"en": "friend", "zh": "朋友", "ico": "🧑‍🤝‍🧑"}, {"en": "meet", "zh": "見面", "ico": "🤝"}, {"en": "favorite", "zh": "最喜歡的", "ico": "⭐"}, {"en": "classmate", "zh": "同學", "ico": "👫"}], "patterns": [{"en": "My name is ___.", "zh": "我叫___。", "slots": ["Amy", "Kevin", "Mei-Ling"]}, {"en": "I like ___.", "zh": "我喜歡___。", "slots": ["drawing", "playing basketball", "reading comics"]}], "phrases": [{"en": "Hi, everyone!", "zh": "大家好！", "tag": "打招呼", "level": 1, "survival": true}, {"en": "My name is Amy.", "zh": "我叫 Amy。", "tag": "介紹名字", "level": 1, "survival": true}, {"en": "Nice to meet you.", "zh": "很高興認識你。", "tag": "打招呼", "level": 1, "survival": true}, {"en": "You can call me Amy.", "zh": "你可以叫我 Amy。", "tag": "介紹名字", "level": 1, "survival": false}, {"en": "I'm in Class 3, Grade 7.", "zh": "我是七年級三班。", "tag": "班級", "level": 2, "survival": false}, {"en": "I like drawing and music.", "zh": "我喜歡畫畫和音樂。", "tag": "興趣", "level": 2, "survival": false}, {"en": "My favorite sport is basketball.", "zh": "我最喜歡的運動是籃球。", "tag": "興趣", "level": 2, "survival": false}, {"en": "What's your name?", "zh": "你叫什麼名字？", "tag": "提問", "level": 2, "survival": false}, {"en": "I hope we can be good friends.", "zh": "希望我們可以成為好朋友。", "tag": "結尾", "level": 3, "survival": false}, {"en": "Please take good care of me.", "zh": "請多多指教。", "tag": "結尾", "level": 3, "survival": false}, {"en": "In my free time, I enjoy reading comics.", "zh": "有空的時候，我喜歡看漫畫。", "tag": "興趣", "level": 3, "survival": false}, {"en": "It's great to be in the same class with you.", "zh": "很高興能和你同班。", "tag": "回應", "level": 3, "survival": false}], "dialogue": {"title": "自我介紹 情境對話", "youRole": "學生", "npcRole": "同學", "lines": [{"who": "you", "en": "Hi, I'm new here. My name is Amy.", "zh": "嗨，我是新來的。我叫 Amy。"}, {"who": "npc", "en": "Hi, Amy! I'm Kevin. Nice to meet you.", "zh": "嗨，Amy！我是 Kevin。很高興認識你。"}, {"who": "you", "en": "Nice to meet you too. Which class are you in?", "zh": "我也很高興認識你。你是哪一班的？"}, {"who": "npc", "en": "I'm in Class 3, Grade 7. How about you?", "zh": "我是七年級三班的。你呢？"}, {"who": "you", "en": "Me too! We're classmates then.", "zh": "我也是！那我們是同班同學耶。"}, {"who": "npc", "en": "That's great! What do you like to do?", "zh": "太好了！你喜歡做什麼呢？"}, {"who": "you", "en": "I like drawing and reading comics. What about you?", "zh": "我喜歡畫畫和看漫畫。你呢？"}, {"who": "npc", "en": "I love playing basketball after school.", "zh": "我很喜歡放學後打籃球。"}, {"who": "you", "en": "Cool! I hope we can be good friends.", "zh": "很酷耶！希望我們可以成為好朋友。"}, {"who": "npc", "en": "Me too. Let's sit together in class!", "zh": "我也是。我們上課坐一起吧！"}]}}, {"id": "new-friends", "icon": "🤝", "title": "認識新朋友", "titleEn": "Making Friends", "desc": "認識新同學、找話題聊天並交換聯絡方式時用得到", "words": [{"en": "new", "zh": "新的", "ico": "✨"}, {"en": "classmate", "zh": "同學", "ico": "🧑‍🎓"}, {"en": "friend", "zh": "朋友", "ico": "🧑‍🤝‍🧑"}, {"en": "name", "zh": "名字", "ico": "🏷️"}, {"en": "hobby", "zh": "興趣", "ico": "🎨"}, {"en": "together", "zh": "一起", "ico": "👫"}, {"en": "seat", "zh": "座位", "ico": "🪑"}, {"en": "phone", "zh": "手機", "ico": "📱"}], "patterns": [{"en": "Do you like ___, too?", "zh": "你也喜歡___嗎？", "slots": ["basketball", "K-pop", "this game"]}, {"en": "Do you want to ___ together?", "zh": "你要不要一起___？", "slots": ["have lunch", "study", "walk home"]}], "phrases": [{"en": "Hi, are you new here?", "zh": "嗨，你是新來的嗎？", "tag": "打招呼", "level": 1, "survival": true}, {"en": "I'm new here, too.", "zh": "我也是新來的。", "tag": "自我介紹", "level": 1, "survival": true}, {"en": "What's your name?", "zh": "你叫什麼名字？", "tag": "問名字", "level": 1, "survival": true}, {"en": "Nice to meet you!", "zh": "很高興認識你！", "tag": "打招呼", "level": 1, "survival": false}, {"en": "Do you like this, too?", "zh": "你也喜歡這個嗎？", "tag": "找話題", "level": 2, "survival": false}, {"en": "Me too! I love it.", "zh": "我也是！我超愛的。", "tag": "回應", "level": 2, "survival": false}, {"en": "Can I sit here?", "zh": "我可以坐這裡嗎？", "tag": "請求", "level": 2, "survival": false}, {"en": "Do you want to hang out?", "zh": "你要不要一起出去玩？", "tag": "邀約", "level": 2, "survival": false}, {"en": "What do you like to do after school?", "zh": "你放學後喜歡做什麼？", "tag": "找話題", "level": 3, "survival": false}, {"en": "Can I have your phone number?", "zh": "可以給我你的電話嗎？", "tag": "交換聯絡", "level": 3, "survival": false}, {"en": "Let's add each other on LINE.", "zh": "我們加一下 LINE 好友吧。", "tag": "交換聯絡", "level": 3, "survival": false}, {"en": "See you tomorrow, friend!", "zh": "明天見囉，朋友！", "tag": "道別", "level": 3, "survival": false}], "dialogue": {"title": "認識新朋友 情境對話", "youRole": "學生", "npcRole": "新同學", "lines": [{"who": "you", "en": "Hi, are you new in our class?", "zh": "嗨，你是我們班新來的嗎？"}, {"who": "npc", "en": "Yeah, today is my first day. I'm Kevin.", "zh": "對啊，今天是我第一天。我叫 Kevin。"}, {"who": "you", "en": "Nice to meet you, Kevin! I'm Amy.", "zh": "很高興認識你，Kevin！我是 Amy。"}, {"who": "npc", "en": "Nice to meet you too. This seat is empty, right?", "zh": "我也很高興認識你。這個位子是空的，對吧？"}, {"who": "you", "en": "Yes, you can sit here next to me.", "zh": "對，你可以坐在我旁邊這裡。"}, {"who": "npc", "en": "Thanks! Wow, you like this game too?", "zh": "謝啦！哇，你也喜歡這款遊戲嗎？"}, {"who": "you", "en": "Me too! Do you want to play together after school?", "zh": "我也喜歡！你放學後要不要一起玩？"}, {"who": "npc", "en": "Sure, that sounds fun!", "zh": "好啊，聽起來很好玩！"}, {"who": "you", "en": "Great! Can I have your LINE so we can chat?", "zh": "太好了！可以給我你的 LINE 嗎？這樣我們可以聊天。"}, {"who": "npc", "en": "Of course! Let's add each other now.", "zh": "當然可以！我們現在互加吧。"}]}}, {"id": "in-class", "icon": "✏️", "title": "上課互動", "titleEn": "In Class", "desc": "上課時發問、聽不懂、需要幫忙時和老師互動用得到", "words": [{"en": "question", "zh": "問題", "ico": "❓"}, {"en": "page", "zh": "頁", "ico": "📄"}, {"en": "answer", "zh": "答案", "ico": "✅"}, {"en": "teacher", "zh": "老師", "ico": "👩‍🏫"}, {"en": "understand", "zh": "了解", "ico": "💡"}, {"en": "repeat", "zh": "重複說", "ico": "🔁"}, {"en": "restroom", "zh": "廁所", "ico": "🚻"}, {"en": "raise", "zh": "舉（手）", "ico": "✋"}], "patterns": [{"en": "Can I ___, please?", "zh": "我可以___嗎？", "slots": ["ask a question", "go to the restroom", "borrow a pencil"]}, {"en": "Could you please ___?", "zh": "可以請您___嗎？", "slots": ["say that again", "speak more slowly", "explain this part"]}], "phrases": [{"en": "Excuse me, I have a question.", "zh": "不好意思，我有一個問題。", "tag": "發問", "level": 1, "survival": true}, {"en": "Can I ask a question, please?", "zh": "我可以問問題嗎？", "tag": "發問", "level": 1, "survival": true}, {"en": "Sorry, I don't understand.", "zh": "抱歉，我聽不懂。", "tag": "回應", "level": 1, "survival": true}, {"en": "Could you say that again, please?", "zh": "可以請您再說一次嗎？", "tag": "請求", "level": 1, "survival": false}, {"en": "May I go to the restroom?", "zh": "我可以去廁所嗎？", "tag": "請求", "level": 1, "survival": false}, {"en": "What page are we on?", "zh": "我們現在在第幾頁？", "tag": "詢問", "level": 2, "survival": false}, {"en": "Could you speak a little more slowly?", "zh": "可以請您說慢一點嗎？", "tag": "請求", "level": 2, "survival": false}, {"en": "I'm sorry, I didn't catch that.", "zh": "抱歉，我沒聽清楚。", "tag": "回應", "level": 2, "survival": false}, {"en": "How do you spell that word?", "zh": "那個字怎麼拼？", "tag": "詢問", "level": 2, "survival": false}, {"en": "Could you explain this part again?", "zh": "可以請您再解釋一次這個部分嗎？", "tag": "請求", "level": 3, "survival": false}, {"en": "I'm not sure what you mean.", "zh": "我不太確定您的意思。", "tag": "回應", "level": 3, "survival": false}, {"en": "Can you help me with this question?", "zh": "您可以幫我看這一題嗎？", "tag": "求助", "level": 3, "survival": false}], "dialogue": {"title": "上課互動 情境對話", "youRole": "學生", "npcRole": "老師", "lines": [{"who": "you", "en": "Excuse me, can I ask a question?", "zh": "不好意思，我可以問問題嗎？"}, {"who": "npc", "en": "Of course. Go ahead.", "zh": "當然可以，請說。"}, {"who": "you", "en": "Sorry, I don't understand this part.", "zh": "抱歉，我聽不懂這個部分。"}, {"who": "npc", "en": "No problem. Which page are you looking at?", "zh": "沒關係，你看的是第幾頁？"}, {"who": "you", "en": "Um, what page are we on now?", "zh": "嗯，我們現在在第幾頁？"}, {"who": "npc", "en": "We're on page twenty. Look at the top.", "zh": "我們在第二十頁，看一下最上面。"}, {"who": "you", "en": "Could you say that again, please?", "zh": "可以請您再說一次嗎？"}, {"who": "npc", "en": "Sure. Turn to page twenty, please.", "zh": "好的，請翻到第二十頁。"}, {"who": "you", "en": "Thank you. May I go to the restroom?", "zh": "謝謝您。我可以去廁所嗎？"}, {"who": "npc", "en": "Yes, you may. Come back quickly.", "zh": "可以，快去快回。"}]}}, {"id": "borrowing", "icon": "✂️", "title": "借東西", "titleEn": "Borrowing Things", "desc": "跟同學借文具、借了要記得歸還道謝時用", "words": [{"en": "borrow", "zh": "借（借入）", "ico": "🙏"}, {"en": "lend", "zh": "借（借出）", "ico": "🤝"}, {"en": "eraser", "zh": "橡皮擦", "ico": "🧽"}, {"en": "pencil", "zh": "鉛筆", "ico": "✏️"}, {"en": "ruler", "zh": "尺", "ico": "📏"}, {"en": "scissors", "zh": "剪刀", "ico": "✂️"}, {"en": "return", "zh": "歸還", "ico": "🔁"}, {"en": "sure", "zh": "當然可以", "ico": "👍"}], "patterns": [{"en": "Can I borrow your ___?", "zh": "我可以借你的___嗎？", "slots": ["eraser", "pencil", "ruler"]}, {"en": "I'll give it back ___.", "zh": "我___就還你。", "slots": ["after class", "in a minute", "tomorrow"]}], "phrases": [{"en": "Can I borrow your eraser?", "zh": "可以借我橡皮擦嗎？", "tag": "請求", "level": 1, "survival": true}, {"en": "Sure, here you go.", "zh": "當然，拿去吧。", "tag": "回應", "level": 1, "survival": true}, {"en": "Thank you so much.", "zh": "真是太謝謝你了。", "tag": "道謝", "level": 1, "survival": true}, {"en": "Can I use it for a second?", "zh": "我可以用一下嗎？", "tag": "請求", "level": 1, "survival": false}, {"en": "I forgot to bring my pencil.", "zh": "我忘記帶鉛筆了。", "tag": "說明", "level": 2, "survival": false}, {"en": "Do you have an extra ruler?", "zh": "你有多的尺嗎？", "tag": "請求", "level": 2, "survival": false}, {"en": "I'll give it back after class.", "zh": "下課後我就還你。", "tag": "承諾", "level": 2, "survival": false}, {"en": "Here's your eraser back.", "zh": "橡皮擦還你。", "tag": "歸還", "level": 2, "survival": false}, {"en": "Sorry, I'm using it right now.", "zh": "抱歉，我現在正在用。", "tag": "婉拒", "level": 3, "survival": false}, {"en": "Thanks for lending it to me.", "zh": "謝謝你借我。", "tag": "道謝", "level": 3, "survival": false}, {"en": "Next time you can borrow mine.", "zh": "下次換你跟我借。", "tag": "回饋", "level": 3, "survival": false}, {"en": "No problem, keep it as long as you need.", "zh": "沒問題，你要用多久都行。", "tag": "回應", "level": 3, "survival": false}], "dialogue": {"title": "借東西 情境對話", "youRole": "學生", "npcRole": "同學", "lines": [{"who": "you", "en": "Hey, can I borrow your eraser?", "zh": "嘿，可以借我橡皮擦嗎？"}, {"who": "npc", "en": "Sure, here you go.", "zh": "當然，拿去吧。"}, {"who": "you", "en": "Thanks! I forgot to bring mine today.", "zh": "謝啦！我今天忘記帶了。"}, {"who": "npc", "en": "No problem. Do you need a ruler too?", "zh": "沒問題。你也需要尺嗎？"}, {"who": "you", "en": "Yes, please. That would be great.", "zh": "好啊，麻煩你了，那太好了。"}, {"who": "npc", "en": "Here you go. Just give it back after class.", "zh": "拿去吧，下課後還我就好。"}, {"who": "you", "en": "Of course. I'll give it back later.", "zh": "當然，我等等就還你。"}, {"who": "npc", "en": "Cool. No rush at all.", "zh": "好喔，完全不用急。"}, {"who": "you", "en": "Thanks for lending it to me. Next time you can borrow mine.", "zh": "謝謝你借我。下次換你跟我借。"}, {"who": "npc", "en": "Sounds good. Happy to help!", "zh": "聽起來不錯，很樂意幫忙！"}]}}, {"id": "group-work", "icon": "👥", "title": "分組報告", "titleEn": "Group Project", "desc": "上課分組討論、分配工作和一起準備上台報告時用", "words": [{"en": "group", "zh": "小組", "ico": "👥"}, {"en": "project", "zh": "專題報告", "ico": "📊"}, {"en": "part", "zh": "部分", "ico": "🧩"}, {"en": "topic", "zh": "主題", "ico": "💡"}, {"en": "slide", "zh": "投影片", "ico": "🖥️"}, {"en": "deadline", "zh": "截止日期", "ico": "📅"}, {"en": "present", "zh": "報告；上台", "ico": "🎤"}, {"en": "idea", "zh": "點子；想法", "ico": "🧠"}], "patterns": [{"en": "I can do the ___.", "zh": "我可以負責___。", "slots": ["intro", "slides", "research"]}, {"en": "I think we should ___.", "zh": "我覺得我們應該___。", "slots": ["start now", "add pictures", "practice first"]}], "phrases": [{"en": "Let's work together on this.", "zh": "我們一起做這個吧。", "tag": "邀請", "level": 1, "survival": true}, {"en": "What's our topic?", "zh": "我們的主題是什麼？", "tag": "提問", "level": 1, "survival": true}, {"en": "Which part do you want to do?", "zh": "你想負責哪個部分？", "tag": "分工", "level": 1, "survival": true}, {"en": "I'll do this part.", "zh": "這部分我來做。", "tag": "分工", "level": 1, "survival": false}, {"en": "I think that's a good idea.", "zh": "我覺得那是個好主意。", "tag": "回應", "level": 1, "survival": false}, {"en": "Can you make the slides?", "zh": "你可以做投影片嗎？", "tag": "請求", "level": 2, "survival": false}, {"en": "When is it due?", "zh": "什麼時候要交？", "tag": "提問", "level": 2, "survival": false}, {"en": "Let's meet after school.", "zh": "我們放學後碰面吧。", "tag": "安排", "level": 2, "survival": false}, {"en": "I don't really agree with that.", "zh": "我不太同意那個想法。", "tag": "回應", "level": 2, "survival": false}, {"en": "Who wants to present first?", "zh": "誰想先上台報告？", "tag": "分工", "level": 3, "survival": false}, {"en": "Maybe we should add some examples.", "zh": "也許我們該加一些例子。", "tag": "建議", "level": 3, "survival": false}, {"en": "Let's practice before the presentation.", "zh": "報告前我們先練習一下吧。", "tag": "安排", "level": 3, "survival": false}], "dialogue": {"title": "分組報告 情境對話", "youRole": "學生", "npcRole": "組員", "lines": [{"who": "you", "en": "Hey, our topic is animals in danger. Where should we start?", "zh": "嘿，我們的主題是瀕危動物。我們該從哪裡開始？"}, {"who": "npc", "en": "Good question. Let's split up the work first.", "zh": "好問題。我們先來分工吧。"}, {"who": "you", "en": "Okay. I can do the research and find some facts.", "zh": "好。我可以負責找資料和一些事實。"}, {"who": "npc", "en": "Great. Then I'll make the slides.", "zh": "太好了。那我來做投影片。"}, {"who": "you", "en": "I think we should add some pictures too.", "zh": "我覺得我們也應該加一些圖片。"}, {"who": "npc", "en": "Good idea. Pictures make it more interesting.", "zh": "好主意。有圖片會更有趣。"}, {"who": "you", "en": "By the way, when is it due?", "zh": "對了，這個什麼時候要交？"}, {"who": "npc", "en": "Next Friday, so we still have time.", "zh": "下週五，所以我們還有時間。"}, {"who": "you", "en": "Let's meet after school on Wednesday to practice.", "zh": "我們週三放學後碰面練習吧。"}, {"who": "npc", "en": "Sounds good. See you then!", "zh": "聽起來不錯。到時候見！"}]}}, {"id": "late-absent", "icon": "⏰", "title": "遲到請假", "titleEn": "Late & Absent", "desc": "上學遲到、生病請假、缺席後補交作業時跟老師說明", "words": [{"en": "late", "zh": "遲到的", "ico": "⏰"}, {"en": "absent", "zh": "缺席的", "ico": "🚪"}, {"en": "sick", "zh": "生病的", "ico": "🤒"}, {"en": "sorry", "zh": "抱歉", "ico": "🙏"}, {"en": "excuse", "zh": "理由；請假單", "ico": "📝"}, {"en": "homework", "zh": "作業", "ico": "📚"}, {"en": "bus", "zh": "公車", "ico": "🚌"}, {"en": "doctor", "zh": "醫生", "ico": "👨‍⚕️"}], "patterns": [{"en": "Sorry I'm late, I ___.", "zh": "抱歉我遲到了，我___。", "slots": ["missed the bus", "overslept", "wasn't feeling well"]}, {"en": "I was absent because I ___.", "zh": "我缺席是因為我___。", "slots": ["was sick", "had a fever", "went to the doctor"]}], "phrases": [{"en": "Sorry I'm late.", "zh": "抱歉我遲到了。", "tag": "道歉", "level": 1, "survival": true}, {"en": "I was sick yesterday.", "zh": "我昨天生病了。", "tag": "說明", "level": 1, "survival": true}, {"en": "Can I come in?", "zh": "我可以進來嗎？", "tag": "請求", "level": 1, "survival": true}, {"en": "I missed the bus this morning.", "zh": "我今天早上錯過了公車。", "tag": "原因", "level": 1, "survival": false}, {"en": "I'm sorry, it won't happen again.", "zh": "對不起，不會再發生了。", "tag": "道歉", "level": 2, "survival": false}, {"en": "I wasn't feeling well yesterday.", "zh": "我昨天身體不舒服。", "tag": "說明", "level": 2, "survival": false}, {"en": "Here is my excuse note from my mom.", "zh": "這是我媽媽寫的請假單。", "tag": "請假", "level": 2, "survival": false}, {"en": "Can I hand in my homework late?", "zh": "我可以晚一點交作業嗎？", "tag": "請求", "level": 2, "survival": false}, {"en": "I overslept because my alarm didn't go off.", "zh": "我睡過頭了，因為鬧鐘沒響。", "tag": "原因", "level": 3, "survival": false}, {"en": "I need to make up the homework I missed.", "zh": "我需要補交我缺交的作業。", "tag": "補交", "level": 3, "survival": false}, {"en": "I had a fever, so I went to see the doctor.", "zh": "我發燒了，所以去看了醫生。", "tag": "說明", "level": 3, "survival": false}, {"en": "Could you please tell me what I missed in class?", "zh": "可以請您告訴我課堂上漏掉了什麼嗎？", "tag": "請求", "level": 3, "survival": false}], "dialogue": {"title": "遲到請假 情境對話", "youRole": "學生", "npcRole": "老師", "lines": [{"who": "you", "en": "Sorry I'm late, Miss Lin.", "zh": "林老師，抱歉我遲到了。"}, {"who": "npc", "en": "It's okay. What happened?", "zh": "沒關係。發生什麼事了？"}, {"who": "you", "en": "I missed the bus this morning.", "zh": "我今天早上錯過了公車。"}, {"who": "npc", "en": "I see. Please take your seat.", "zh": "了解。請坐到你的位子吧。"}, {"who": "you", "en": "Also, I was absent yesterday because I was sick.", "zh": "還有，我昨天生病所以缺席了。"}, {"who": "npc", "en": "Are you feeling better now?", "zh": "你現在好一點了嗎？"}, {"who": "you", "en": "Yes, thank you. Here is my excuse note.", "zh": "好多了，謝謝老師。這是我的請假單。"}, {"who": "npc", "en": "Great. Don't forget you missed some homework.", "zh": "很好。別忘了你有作業沒交。"}, {"who": "you", "en": "I know. Can I make it up by Friday?", "zh": "我知道。我可以在星期五前補交嗎？"}, {"who": "npc", "en": "Sure. Hand it in by Friday and you'll be fine.", "zh": "當然。星期五前交來就沒問題了。"}]}}, {"id": "library", "icon": "📚", "title": "圖書館", "titleEn": "At the Library", "desc": "在圖書館借還書、找書、續借與逾期時會用到的說法", "words": [{"en": "library", "zh": "圖書館", "ico": "📚"}, {"en": "book", "zh": "書", "ico": "📖"}, {"en": "borrow", "zh": "借（出）", "ico": "🙌"}, {"en": "return", "zh": "歸還", "ico": "↩️"}, {"en": "librarian", "zh": "圖書館員", "ico": "🧑‍🏫"}, {"en": "shelf", "zh": "書架", "ico": "🗄️"}, {"en": "due date", "zh": "到期日", "ico": "📅"}, {"en": "quiet", "zh": "安靜的", "ico": "🤫"}], "patterns": [{"en": "Where can I find ___?", "zh": "我在哪裡可以找到 ___？", "slots": ["English books", "the science section", "this magazine"]}, {"en": "Can I ___ this book?", "zh": "我可以 ___ 這本書嗎？", "slots": ["borrow", "renew", "return"]}], "phrases": [{"en": "I'd like to borrow these books.", "zh": "我想借這幾本書。", "tag": "借書", "level": 1, "survival": true}, {"en": "Where can I return this book?", "zh": "我要在哪裡還這本書？", "tag": "還書", "level": 1, "survival": true}, {"en": "Excuse me, could you help me find a book?", "zh": "不好意思，你可以幫我找一本書嗎？", "tag": "求助", "level": 1, "survival": true}, {"en": "Here is my library card.", "zh": "這是我的借書證。", "tag": "借書", "level": 1, "survival": false}, {"en": "When is this book due?", "zh": "這本書什麼時候到期？", "tag": "借閱期限", "level": 2, "survival": false}, {"en": "How many books can I borrow at once?", "zh": "我一次可以借幾本書？", "tag": "借書", "level": 2, "survival": false}, {"en": "Can I renew this book?", "zh": "我可以續借這本書嗎？", "tag": "續借", "level": 2, "survival": false}, {"en": "I think this book is on the wrong shelf.", "zh": "我覺得這本書放錯書架了。", "tag": "找書", "level": 2, "survival": false}, {"en": "I'm sorry, my book is a few days overdue.", "zh": "抱歉，我的書逾期幾天了。", "tag": "逾期", "level": 3, "survival": false}, {"en": "Is there a fine for returning it late?", "zh": "還書遲了會有罰款嗎？", "tag": "逾期", "level": 3, "survival": false}, {"en": "Please keep your voice down in the reading area.", "zh": "在閱讀區請小聲一點。", "tag": "安靜", "level": 3, "survival": false}, {"en": "Could you tell me where the science section is?", "zh": "可以告訴我科學類的書區在哪裡嗎？", "tag": "找書", "level": 3, "survival": false}], "dialogue": {"title": "圖書館 情境對話", "youRole": "學生", "npcRole": "圖書館員", "lines": [{"who": "you", "en": "Hi, I'd like to borrow these three books.", "zh": "你好，我想借這三本書。"}, {"who": "npc", "en": "Sure. May I see your library card, please?", "zh": "好的。可以看一下你的借書證嗎？"}, {"who": "you", "en": "Here you go. When are they due?", "zh": "在這裡。它們什麼時候到期？"}, {"who": "npc", "en": "They're due in two weeks, on July 18th.", "zh": "兩週後到期，也就是七月十八號。"}, {"who": "you", "en": "Can I renew them if I need more time?", "zh": "如果我需要更多時間，可以續借嗎？"}, {"who": "npc", "en": "Yes, you can renew each book once online.", "zh": "可以，每本書都能在線上續借一次。"}, {"who": "you", "en": "Great. What happens if a book is overdue?", "zh": "太好了。如果書逾期了會怎麼樣？"}, {"who": "npc", "en": "There's a small fine of one dollar per day.", "zh": "會有一天一元的小額罰款。"}, {"who": "you", "en": "Got it. Thank you for your help!", "zh": "了解了，謝謝你的幫忙！"}, {"who": "npc", "en": "You're welcome. Please remember to stay quiet inside.", "zh": "不客氣。館內請記得保持安靜喔。"}]}}, {"id": "school-lunch", "icon": "🍱", "title": "午餐時間", "titleEn": "School Lunch", "desc": "學校午餐打菜、分食與收拾餐具時會用到的英語", "words": [{"en": "lunch", "zh": "午餐", "ico": "🍱"}, {"en": "tray", "zh": "餐盤", "ico": "🍽️"}, {"en": "rice", "zh": "白飯", "ico": "🍚"}, {"en": "soup", "zh": "湯", "ico": "🥣"}, {"en": "chopsticks", "zh": "筷子", "ico": "🥢"}, {"en": "serve", "zh": "打菜／盛飯", "ico": "🍲"}, {"en": "hungry", "zh": "餓的", "ico": "😋"}, {"en": "leftovers", "zh": "剩菜", "ico": "🗑️"}], "patterns": [{"en": "Can I have some more ___, please?", "zh": "我可以多要一點___嗎？", "slots": ["rice", "soup", "vegetables"]}, {"en": "Do you want to eat my ___?", "zh": "你要不要吃我的___？", "slots": ["carrots", "meat", "dessert"]}], "phrases": [{"en": "It's lunchtime!", "zh": "午餐時間到了！", "tag": "開場", "level": 1, "survival": true}, {"en": "I'm so hungry.", "zh": "我好餓。", "tag": "表達", "level": 1, "survival": true}, {"en": "Can I have some more rice, please?", "zh": "我可以多要一點白飯嗎？", "tag": "請求", "level": 1, "survival": true}, {"en": "Here's your tray.", "zh": "這是你的餐盤。", "tag": "遞送", "level": 1, "survival": false}, {"en": "Do you want to eat my carrots?", "zh": "你要不要吃我的紅蘿蔔？", "tag": "分食", "level": 2, "survival": false}, {"en": "No thanks, I'm full.", "zh": "不用了，謝謝，我飽了。", "tag": "回應", "level": 2, "survival": false}, {"en": "It's my turn to serve the food today.", "zh": "今天輪到我打菜。", "tag": "值日生", "level": 2, "survival": false}, {"en": "Can you pass me the soup?", "zh": "你可以把湯遞給我嗎？", "tag": "請求", "level": 2, "survival": false}, {"en": "This school lunch is really tasty.", "zh": "這份營養午餐真好吃。", "tag": "分享", "level": 3, "survival": false}, {"en": "Please don't waste any food.", "zh": "請不要浪費食物。", "tag": "提醒", "level": 3, "survival": false}, {"en": "Let's clear the trays and wash the chopsticks.", "zh": "我們來收餐盤、洗筷子吧。", "tag": "收拾", "level": 3, "survival": false}, {"en": "I'll take the leftovers to the kitchen.", "zh": "我來把剩菜拿去廚房。", "tag": "收拾", "level": 3, "survival": false}], "dialogue": {"title": "午餐時間 情境對話", "youRole": "學生", "npcRole": "同學", "lines": [{"who": "you", "en": "It's lunchtime! I'm so hungry.", "zh": "午餐時間到了！我好餓。"}, {"who": "npc", "en": "Me too. It's my turn to serve the food today.", "zh": "我也是。今天輪到我打菜。"}, {"who": "you", "en": "Great! Can I have some more rice, please?", "zh": "太好了！我可以多要一點白飯嗎？"}, {"who": "npc", "en": "Sure, here you go. Do you want some soup too?", "zh": "當然，給你。你也要來點湯嗎？"}, {"who": "you", "en": "Yes, please. Can you pass me the chopsticks?", "zh": "好啊，麻煩你。你可以把筷子遞給我嗎？"}, {"who": "npc", "en": "Here they are. Do you want to eat my carrots?", "zh": "在這裡。你要不要吃我的紅蘿蔔？"}, {"who": "you", "en": "No thanks, I'm full. Please don't waste any food.", "zh": "不用了，謝謝，我飽了。請不要浪費食物喔。"}, {"who": "npc", "en": "You're right. This school lunch is really tasty.", "zh": "你說得對。這份營養午餐真好吃。"}, {"who": "you", "en": "Let's clear the trays and wash the chopsticks.", "zh": "我們來收餐盤、洗筷子吧。"}, {"who": "npc", "en": "Okay, and I'll take the leftovers to the kitchen.", "zh": "好，我來把剩菜拿去廚房。"}]}}, {"id": "pe-sports", "icon": "⚽", "title": "體育課", "titleEn": "P.E. & Sports", "desc": "上體育課、暖身、分隊比賽和運動時會用到的英語", "words": [{"en": "warm up", "zh": "暖身", "ico": "🤸"}, {"en": "team", "zh": "隊伍", "ico": "👥"}, {"en": "pass", "zh": "傳球", "ico": "⚽"}, {"en": "catch", "zh": "接（球）", "ico": "🧤"}, {"en": "run", "zh": "跑步", "ico": "🏃"}, {"en": "stretch", "zh": "伸展", "ico": "🧘"}, {"en": "tired", "zh": "累的", "ico": "😮‍💨"}, {"en": "whistle", "zh": "哨子", "ico": "📣"}], "patterns": [{"en": "Can I ___?", "zh": "我可以___嗎？", "slots": ["join your team", "have some water", "sit down for a minute"]}, {"en": "It's my ___.", "zh": "輪到我的___了。", "slots": ["turn", "ball", "team's point"]}], "phrases": [{"en": "Let's warm up first.", "zh": "我們先來暖身吧。", "tag": "開始", "level": 1, "survival": false}, {"en": "Can I join in?", "zh": "我可以加入嗎？", "tag": "請求", "level": 1, "survival": true}, {"en": "It's my turn!", "zh": "換我了！", "tag": "輪流", "level": 1, "survival": true}, {"en": "Pass me the ball!", "zh": "把球傳給我！", "tag": "傳球", "level": 1, "survival": false}, {"en": "I'm so tired.", "zh": "我好累。", "tag": "感受", "level": 1, "survival": true}, {"en": "Good job, everyone!", "zh": "大家做得好！", "tag": "鼓勵", "level": 2, "survival": false}, {"en": "Let's split into two teams.", "zh": "我們分成兩隊吧。", "tag": "分隊", "level": 2, "survival": false}, {"en": "Which team am I on?", "zh": "我在哪一隊？", "tag": "分隊", "level": 2, "survival": false}, {"en": "Can we take a short break?", "zh": "我們可以休息一下嗎？", "tag": "請求", "level": 2, "survival": false}, {"en": "Don't forget to stretch after running.", "zh": "跑完別忘了伸展。", "tag": "提醒", "level": 3, "survival": false}, {"en": "Nice catch! You're getting better.", "zh": "接得好！你越來越厲害了。", "tag": "稱讚", "level": 3, "survival": false}, {"en": "Let's give it one more try before class ends.", "zh": "下課前我們再試一次吧。", "tag": "鼓勵", "level": 3, "survival": false}], "dialogue": {"title": "體育課 情境對話", "youRole": "學生", "npcRole": "體育老師", "lines": [{"who": "you", "en": "Good morning! Are we playing soccer today?", "zh": "老師早！我們今天要踢足球嗎？"}, {"who": "npc", "en": "Yes, but let's warm up and stretch first.", "zh": "對，不過我們先暖身和伸展。"}, {"who": "you", "en": "Okay. Can I join the blue team?", "zh": "好的。我可以加入藍隊嗎？"}, {"who": "npc", "en": "Sure. Now let's split into two teams and start.", "zh": "當然。現在我們分成兩隊開始吧。"}, {"who": "you", "en": "Pass me the ball! I'm open!", "zh": "把球傳給我！我沒人守！"}, {"who": "npc", "en": "Nice catch! Now it's your turn to shoot.", "zh": "接得好！現在換你射門。"}, {"who": "you", "en": "I scored! But I'm so tired now.", "zh": "我得分了！不過我現在好累。"}, {"who": "npc", "en": "Good job! Take a short break and drink some water.", "zh": "做得好！休息一下，喝點水吧。"}, {"who": "you", "en": "Thanks. Can we play again after the break?", "zh": "謝謝。休息後我們可以再玩一次嗎？"}, {"who": "npc", "en": "Of course. Don't forget to stretch before we finish.", "zh": "當然。結束前別忘了伸展。"}]}}, {"id": "clubs", "icon": "🎨", "title": "社團活動", "titleEn": "Clubs & Activities", "desc": "報名參加社團、詢問時間與準備成果發表時用得到", "words": [{"en": "club", "zh": "社團", "ico": "🎨"}, {"en": "join", "zh": "加入", "ico": "🙋"}, {"en": "member", "zh": "社員", "ico": "🧑‍🤝‍🧑"}, {"en": "practice", "zh": "練習", "ico": "🏃"}, {"en": "meeting", "zh": "聚會", "ico": "📅"}, {"en": "president", "zh": "社長", "ico": "👑"}, {"en": "perform", "zh": "表演", "ico": "🎭"}, {"en": "fun", "zh": "有趣的", "ico": "🎉"}], "patterns": [{"en": "I want to join the ___ club.", "zh": "我想加入___社。", "slots": ["art", "music", "basketball"]}, {"en": "When do we ___?", "zh": "我們什麼時候___？", "slots": ["practice", "meet", "perform"]}], "phrases": [{"en": "I want to join the art club.", "zh": "我想加入美術社。", "tag": "報名", "level": 1, "survival": true}, {"en": "How do I sign up?", "zh": "我要怎麼報名？", "tag": "報名", "level": 1, "survival": true}, {"en": "What clubs can I join?", "zh": "我可以加入哪些社團？", "tag": "詢問", "level": 1, "survival": true}, {"en": "Is this club fun?", "zh": "這個社團好玩嗎？", "tag": "詢問", "level": 1, "survival": false}, {"en": "When does the club meet?", "zh": "社團什麼時候聚會？", "tag": "時間", "level": 2, "survival": false}, {"en": "How often do we practice?", "zh": "我們多久練習一次？", "tag": "時間", "level": 2, "survival": false}, {"en": "What do I need to bring?", "zh": "我需要準備什麼？", "tag": "準備", "level": 2, "survival": false}, {"en": "Do I need any experience?", "zh": "我需要有經驗嗎？", "tag": "準備", "level": 2, "survival": false}, {"en": "Can I try it before I join?", "zh": "加入前我可以先試試看嗎？", "tag": "詢問", "level": 3, "survival": false}, {"en": "I'm a little nervous about performing.", "zh": "我對表演有點緊張。", "tag": "心情", "level": 3, "survival": false}, {"en": "When is our final show?", "zh": "我們的成果發表是什麼時候？", "tag": "成果", "level": 3, "survival": false}, {"en": "I can't wait to perform on stage!", "zh": "我等不及要上台表演了！", "tag": "心情", "level": 3, "survival": false}], "dialogue": {"title": "社團活動 情境對話", "youRole": "學生", "npcRole": "社長", "lines": [{"who": "you", "en": "Hi, I want to join the art club. Is it still open?", "zh": "你好，我想加入美術社。還可以報名嗎？"}, {"who": "npc", "en": "Yes, we're still taking new members. Welcome!", "zh": "可以，我們還在收新社員。歡迎你！"}, {"who": "you", "en": "Great! When does the club meet?", "zh": "太好了！社團什麼時候聚會？"}, {"who": "npc", "en": "We meet every Wednesday after school.", "zh": "我們每週三放學後聚會。"}, {"who": "you", "en": "What do I need to bring to practice?", "zh": "練習時我需要準備什麼？"}, {"who": "npc", "en": "Just bring a pencil and your notebook. We'll give you the rest.", "zh": "只要帶鉛筆和筆記本就好，其他的我們會提供。"}, {"who": "you", "en": "Do I need any experience to join?", "zh": "加入需要有經驗嗎？"}, {"who": "npc", "en": "Not at all. We'll teach you step by step.", "zh": "完全不用，我們會一步一步教你。"}, {"who": "you", "en": "When is our final show?", "zh": "我們的成果發表是什麼時候？"}, {"who": "npc", "en": "It's at the end of the semester. I'm sure you'll do great!", "zh": "在學期末。我相信你一定會表現得很棒！"}]}}];
-</script>
-
-<script>
+window.__REF__ = {"emergency":[],"tipping":[]};
+window.__SCENARIOS__ = [{"id": "self-intro", "icon": "🙋", "title": "自我介紹", "titleEn": "Introducing Yourself", "desc": "開學認識新同學，介紹自己的名字、班級和興趣", "words": [{"en": "name", "zh": "名字", "ico": "📛"}, {"en": "grade", "zh": "年級", "ico": "🔢"}, {"en": "class", "zh": "班級", "ico": "🏫"}, {"en": "hobby", "zh": "嗜好", "ico": "🎨"}, {"en": "friend", "zh": "朋友", "ico": "🧑‍🤝‍🧑"}, {"en": "meet", "zh": "見面", "ico": "🤝"}, {"en": "favorite", "zh": "最喜歡的", "ico": "⭐"}, {"en": "classmate", "zh": "同學", "ico": "👫"}], "patterns": [{"en": "My name is ___.", "zh": "我叫___。", "slots": ["Amy", "Kevin", "Mei-Ling"]}, {"en": "I like ___.", "zh": "我喜歡___。", "slots": ["drawing", "playing basketball", "reading comics"]}], "phrases": [{"en": "Hi, everyone!", "zh": "大家好！", "tag": "打招呼", "level": 1, "survival": true, "homophone": "嗨，艾夫瑞萬！"}, {"en": "My name is Amy.", "zh": "我叫 Amy。", "tag": "介紹名字", "level": 1, "survival": true, "homophone": "麥 內姆 意茲 艾咪。"}, {"en": "Nice to meet you.", "zh": "很高興認識你。", "tag": "打招呼", "level": 1, "survival": true, "homophone": "耐斯 兔 密特 呦。"}, {"en": "You can call me Amy.", "zh": "你可以叫我 Amy。", "tag": "介紹名字", "level": 1, "survival": false, "homophone": "呦 肯 摳 密 艾咪。"}, {"en": "I'm in Class 3, Grade 7.", "zh": "我是七年級三班。", "tag": "班級", "level": 1, "survival": false, "homophone": "愛姆 引 克拉斯 斯瑞，古瑞得 塞文。"}, {"en": "I like drawing and music.", "zh": "我喜歡畫畫和音樂。", "tag": "興趣", "level": 1, "survival": false, "homophone": "愛 賴克 抓凝 安得 繆基克。"}, {"en": "My favorite sport is basketball.", "zh": "我最喜歡的運動是籃球。", "tag": "興趣", "level": 1, "survival": false, "homophone": "麥 費佛瑞特 斯波特 意茲 貝斯克特波。"}, {"en": "What's your name?", "zh": "你叫什麼名字？", "tag": "提問", "level": 1, "survival": false, "homophone": "華資 幼兒 內姆？"}, {"en": "I hope we can be good friends.", "zh": "希望我們可以成為好朋友。", "tag": "結尾", "level": 2, "survival": false}, {"en": "I'm looking forward to getting to know everyone.", "zh": "很期待認識大家。", "tag": "結尾", "level": 2, "survival": false, "homophone": ""}, {"en": "In my free time, I enjoy reading comics.", "zh": "有空的時候，我喜歡看漫畫。", "tag": "興趣", "level": 2, "survival": false}, {"en": "It's great to be in the same class as you.", "zh": "很高興跟你同班。", "tag": "回應", "level": 2, "survival": false, "homophone": ""}], "dialogue": {"title": "自我介紹 情境對話", "youRole": "學生", "npcRole": "同學", "lines": [{"who": "you", "en": "Hi, I'm new here. My name is Amy.", "zh": "嗨，我是新來的。我叫 Amy。"}, {"who": "npc", "en": "Hi, Amy! I'm Kevin. Nice to meet you.", "zh": "嗨，Amy！我是 Kevin。很高興認識你。"}, {"who": "you", "en": "Nice to meet you too. Which class are you in?", "zh": "我也很高興認識你。你是哪一班的？"}, {"who": "npc", "en": "I'm in Class 3, Grade 7. How about you?", "zh": "我是七年級三班的。你呢？"}, {"who": "you", "en": "Me too! We're classmates then.", "zh": "我也是！那我們是同班同學耶。"}, {"who": "npc", "en": "That's great! What do you like to do?", "zh": "太好了！你喜歡做什麼呢？"}, {"who": "you", "en": "I like drawing and reading comics. What about you?", "zh": "我喜歡畫畫和看漫畫。你呢？"}, {"who": "npc", "en": "I love playing basketball after school.", "zh": "我很喜歡放學後打籃球。"}, {"who": "you", "en": "Cool! I hope we can be good friends.", "zh": "很酷耶！希望我們可以成為好朋友。"}, {"who": "npc", "en": "Me too. Let's sit together in class!", "zh": "我也是。我們上課坐一起吧！"}]}, "country": "US"}, {"id": "new-friends", "icon": "🤝", "title": "認識新朋友", "titleEn": "Making Friends", "desc": "認識新同學、找話題聊天並交換聯絡方式時用得到", "words": [{"en": "new", "zh": "新的", "ico": "✨"}, {"en": "classmate", "zh": "同學", "ico": "🧑‍🎓"}, {"en": "friend", "zh": "朋友", "ico": "🧑‍🤝‍🧑"}, {"en": "name", "zh": "名字", "ico": "🏷️"}, {"en": "hobby", "zh": "興趣", "ico": "🎨"}, {"en": "together", "zh": "一起", "ico": "👫"}, {"en": "seat", "zh": "座位", "ico": "🪑"}, {"en": "phone", "zh": "手機", "ico": "📱"}], "patterns": [{"en": "Do you like ___, too?", "zh": "你也喜歡___嗎？", "slots": ["basketball", "K-pop", "this game"]}, {"en": "Do you want to ___ together?", "zh": "你要不要一起___？", "slots": ["have lunch", "study", "walk home"]}], "phrases": [{"en": "Hi, are you new here?", "zh": "嗨，你是新來的嗎？", "tag": "打招呼", "level": 1, "survival": true, "homophone": "嗨，阿兒 呦 紐 希爾？"}, {"en": "I'm new here, too.", "zh": "我也是新來的。", "tag": "自我介紹", "level": 1, "survival": true, "homophone": "愛姆 紐 希爾，兔。"}, {"en": "What's your name?", "zh": "你叫什麼名字？", "tag": "問名字", "level": 1, "survival": true, "homophone": "華資 幼兒 內姆？"}, {"en": "Nice to meet you!", "zh": "很高興認識你！", "tag": "打招呼", "level": 1, "survival": false, "homophone": "耐斯 兔 密特 呦！"}, {"en": "Do you like this, too?", "zh": "你也喜歡這個嗎？", "tag": "找話題", "level": 1, "survival": false, "homophone": "賭 呦 賴克 利斯，兔？"}, {"en": "Me too! I love it.", "zh": "我也是！我超愛的。", "tag": "回應", "level": 1, "survival": false, "homophone": "密 兔！愛 拉夫 意特。"}, {"en": "Can I sit here?", "zh": "我可以坐這裡嗎？", "tag": "請求", "level": 1, "survival": false, "homophone": "肯 愛 系特 希爾？"}, {"en": "Do you want to hang out?", "zh": "你要不要一起出去玩？", "tag": "邀約", "level": 1, "survival": false, "homophone": "賭 呦 王特 兔 亨 奧特？"}, {"en": "What do you like to do after school?", "zh": "你放學後喜歡做什麼？", "tag": "找話題", "level": 2, "survival": false}, {"en": "Can I have your phone number?", "zh": "可以給我你的電話嗎？", "tag": "交換聯絡", "level": 1, "survival": false}, {"en": "Let's add each other on LINE.", "zh": "我們加一下 LINE 好友吧。", "tag": "交換聯絡", "level": 1, "survival": false}, {"en": "See you tomorrow, friend!", "zh": "明天見囉，朋友！", "tag": "道別", "level": 1, "survival": false}], "dialogue": {"title": "認識新朋友 情境對話", "youRole": "學生", "npcRole": "新同學", "lines": [{"who": "you", "en": "Hi, are you new in our class?", "zh": "嗨，你是我們班新來的嗎？"}, {"who": "npc", "en": "Yeah, today is my first day. I'm Kevin.", "zh": "對啊，今天是我第一天。我叫 Kevin。"}, {"who": "you", "en": "Nice to meet you, Kevin! I'm Amy.", "zh": "很高興認識你，Kevin！我是 Amy。"}, {"who": "npc", "en": "Nice to meet you too. This seat is empty, right?", "zh": "我也很高興認識你。這個位子是空的，對吧？"}, {"who": "you", "en": "Yes, you can sit here next to me.", "zh": "對，你可以坐在我旁邊這裡。"}, {"who": "npc", "en": "Thanks! Wow, you like this game too?", "zh": "謝啦！哇，你也喜歡這款遊戲嗎？"}, {"who": "you", "en": "Me too! Do you want to play together after school?", "zh": "我也喜歡！你放學後要不要一起玩？"}, {"who": "npc", "en": "Sure, that sounds fun!", "zh": "好啊，聽起來很好玩！"}, {"who": "you", "en": "Great! Can I have your LINE so we can chat?", "zh": "太好了！可以給我你的 LINE 嗎？這樣我們可以聊天。"}, {"who": "npc", "en": "Of course! Let's add each other now.", "zh": "當然可以！我們現在互加吧。"}]}, "country": "US"}, {"id": "in-class", "icon": "✏️", "title": "上課互動", "titleEn": "In Class", "desc": "上課時發問、聽不懂、需要幫忙時和老師互動用得到", "words": [{"en": "question", "zh": "問題", "ico": "❓"}, {"en": "page", "zh": "頁", "ico": "📄"}, {"en": "answer", "zh": "答案", "ico": "✅"}, {"en": "teacher", "zh": "老師", "ico": "👩‍🏫"}, {"en": "understand", "zh": "了解", "ico": "💡"}, {"en": "repeat", "zh": "重複說", "ico": "🔁"}, {"en": "restroom", "zh": "廁所", "ico": "🚻"}, {"en": "raise", "zh": "舉（手）", "ico": "✋"}], "patterns": [{"en": "Can I ___, please?", "zh": "我可以___嗎？", "slots": ["ask a question", "go to the restroom", "borrow a pencil"]}, {"en": "Could you please ___?", "zh": "可以請您___嗎？", "slots": ["say that again", "speak more slowly", "explain this part"]}], "phrases": [{"en": "Excuse me, I have a question.", "zh": "不好意思，我有一個問題。", "tag": "發問", "level": 1, "survival": true, "homophone": "一克斯Q斯 密，愛 黑夫 阿 魁斯去恩。"}, {"en": "Can I ask a question, please?", "zh": "我可以問問題嗎？", "tag": "發問", "level": 1, "survival": true, "homophone": "肯 愛 阿斯克 阿 魁斯去恩，普利茲？"}, {"en": "Sorry, I don't understand.", "zh": "抱歉，我聽不懂。", "tag": "回應", "level": 1, "survival": true, "homophone": "蒐瑞，愛 動恩特 安德斯坦得。"}, {"en": "Could you say that again, please?", "zh": "可以請您再說一次嗎？", "tag": "請求", "level": 1, "survival": false, "homophone": "苦揪 塞伊 賽特 阿根，普利茲？"}, {"en": "May I go to the restroom?", "zh": "我可以去廁所嗎？", "tag": "請求", "level": 1, "survival": false, "homophone": "沒 愛 購 兔 得 瑞斯潤姆？"}, {"en": "What page are we on?", "zh": "我們現在在第幾頁？", "tag": "詢問", "level": 1, "survival": false, "homophone": "華特 佩基 阿兒 威 安？"}, {"en": "Could you speak a little more slowly?", "zh": "可以請您說慢一點嗎？", "tag": "請求", "level": 2, "survival": false, "homophone": "苦揪 斯批克 阿 利透 摩爾 斯樓利？"}, {"en": "I'm sorry, I didn't catch that.", "zh": "抱歉，我沒聽清楚。", "tag": "回應", "level": 1, "survival": false, "homophone": "愛姆 蒐瑞，愛 低敦特 凱區 賽特。"}, {"en": "How do you spell that word?", "zh": "那個字怎麼拼？", "tag": "詢問", "level": 1, "survival": false}, {"en": "Could you explain this part again?", "zh": "可以請您再解釋一次這個部分嗎？", "tag": "請求", "level": 1, "survival": false}, {"en": "I'm not sure what you mean.", "zh": "我不太確定您的意思。", "tag": "回應", "level": 1, "survival": false}, {"en": "Can you help me with this question?", "zh": "您可以幫我看這一題嗎？", "tag": "求助", "level": 2, "survival": false}], "dialogue": {"title": "上課互動 情境對話", "youRole": "學生", "npcRole": "老師", "lines": [{"who": "you", "en": "Excuse me, can I ask a question?", "zh": "不好意思，我可以問問題嗎？"}, {"who": "npc", "en": "Of course. Go ahead.", "zh": "當然可以，請說。"}, {"who": "you", "en": "Sorry, I don't understand this part.", "zh": "抱歉，我聽不懂這個部分。"}, {"who": "npc", "en": "No problem. Which page are you looking at?", "zh": "沒關係，你看的是第幾頁？"}, {"who": "you", "en": "Um, what page are we on now?", "zh": "嗯，我們現在在第幾頁？"}, {"who": "npc", "en": "We're on page twenty. Look at the top.", "zh": "我們在第二十頁，看一下最上面。"}, {"who": "you", "en": "Could you say that again, please?", "zh": "可以請您再說一次嗎？"}, {"who": "npc", "en": "Sure. Turn to page twenty, please.", "zh": "好的，請翻到第二十頁。"}, {"who": "you", "en": "Thank you. May I go to the restroom?", "zh": "謝謝您。我可以去廁所嗎？"}, {"who": "npc", "en": "Yes, you may. Come back quickly.", "zh": "可以，快去快回。"}]}, "country": "US"}, {"id": "borrowing", "icon": "✂️", "title": "借東西", "titleEn": "Borrowing Things", "desc": "跟同學借文具、借了要記得歸還道謝時用", "words": [{"en": "borrow", "zh": "借（借入）", "ico": "🙏"}, {"en": "lend", "zh": "借（借出）", "ico": "🤝"}, {"en": "eraser", "zh": "橡皮擦", "ico": "🧽"}, {"en": "pencil", "zh": "鉛筆", "ico": "✏️"}, {"en": "ruler", "zh": "尺", "ico": "📏"}, {"en": "scissors", "zh": "剪刀", "ico": "✂️"}, {"en": "return", "zh": "歸還", "ico": "🔁"}, {"en": "sure", "zh": "當然可以", "ico": "👍"}], "patterns": [{"en": "Can I borrow your ___?", "zh": "我可以借你的___嗎？", "slots": ["eraser", "pencil", "ruler"]}, {"en": "I'll give it back ___.", "zh": "我___就還你。", "slots": ["after class", "in a minute", "tomorrow"]}], "phrases": [{"en": "Can I borrow your eraser?", "zh": "可以借我橡皮擦嗎？", "tag": "請求", "level": 1, "survival": true, "homophone": "肯 愛 波柔 幼兒 意瑞色兒？"}, {"en": "Sure, here you go.", "zh": "當然，拿去吧。", "tag": "回應", "level": 1, "survival": true, "homophone": "修兒，希爾 呦 購。"}, {"en": "Thank you so much.", "zh": "真是太謝謝你了。", "tag": "道謝", "level": 1, "survival": true, "homophone": "山Q 蒐 罵區。"}, {"en": "Can I use it for a second?", "zh": "我可以用一下嗎？", "tag": "請求", "level": 2, "survival": false, "homophone": "肯 愛 尤斯 意特 佛兒 阿 塞肯得？"}, {"en": "I forgot to bring my pencil.", "zh": "我忘記帶鉛筆了。", "tag": "說明", "level": 1, "survival": false, "homophone": "愛 佛蓋特 兔 布靈 麥 潘蒐。"}, {"en": "Do you have an extra ruler?", "zh": "你有多的尺嗎？", "tag": "請求", "level": 1, "survival": false, "homophone": "賭 呦 黑夫 恩 一克斯淬 如樂兒？"}, {"en": "I'll give it back after class.", "zh": "下課後我就還你。", "tag": "承諾", "level": 1, "survival": false, "homophone": "愛歐 哥一夫 意特 貝克 阿夫特 克拉斯。"}, {"en": "Here's your eraser back.", "zh": "橡皮擦還你。", "tag": "歸還", "level": 1, "survival": false, "homophone": "希爾資 幼兒 意瑞色兒 貝克。"}, {"en": "Sorry, I'm using it right now.", "zh": "抱歉，我現在正在用。", "tag": "婉拒", "level": 1, "survival": false}, {"en": "Thanks for lending it to me.", "zh": "謝謝你借我。", "tag": "道謝", "level": 1, "survival": false}, {"en": "Next time you can borrow mine.", "zh": "下次換你跟我借。", "tag": "回饋", "level": 1, "survival": false}, {"en": "No problem, keep it as long as you need.", "zh": "沒問題，你要用多久都行。", "tag": "回應", "level": 2, "survival": false}], "dialogue": {"title": "借東西 情境對話", "youRole": "學生", "npcRole": "同學", "lines": [{"who": "you", "en": "Hey, can I borrow your eraser?", "zh": "嘿，可以借我橡皮擦嗎？"}, {"who": "npc", "en": "Sure, here you go.", "zh": "當然，拿去吧。"}, {"who": "you", "en": "Thanks! I forgot to bring mine today.", "zh": "謝啦！我今天忘記帶了。"}, {"who": "npc", "en": "No problem. Do you need a ruler too?", "zh": "沒問題。你也需要尺嗎？"}, {"who": "you", "en": "Yes, please. That would be great.", "zh": "好啊，麻煩你了，那太好了。"}, {"who": "npc", "en": "Here you go. Just give it back after class.", "zh": "拿去吧，下課後還我就好。"}, {"who": "you", "en": "Of course. I'll give it back later.", "zh": "當然，我等等就還你。"}, {"who": "npc", "en": "Cool. No rush at all.", "zh": "好喔，完全不用急。"}, {"who": "you", "en": "Thanks for lending it to me. Next time you can borrow mine.", "zh": "謝謝你借我。下次換你跟我借。"}, {"who": "npc", "en": "Sounds good. Happy to help!", "zh": "聽起來不錯，很樂意幫忙！"}]}, "country": "US"}, {"id": "group-work", "icon": "👥", "title": "分組報告", "titleEn": "Group Project", "desc": "上課分組討論、分配工作和一起準備上台報告時用", "words": [{"en": "group", "zh": "小組", "ico": "👥"}, {"en": "project", "zh": "專題報告", "ico": "📊"}, {"en": "part", "zh": "部分", "ico": "🧩"}, {"en": "topic", "zh": "主題", "ico": "💡"}, {"en": "slide", "zh": "投影片", "ico": "🖥️"}, {"en": "deadline", "zh": "截止日期", "ico": "📅"}, {"en": "present", "zh": "報告；上台", "ico": "🎤"}, {"en": "idea", "zh": "點子；想法", "ico": "🧠"}], "patterns": [{"en": "I can do the ___.", "zh": "我可以負責___。", "slots": ["intro", "slides", "research"]}, {"en": "I think we should ___.", "zh": "我覺得我們應該___。", "slots": ["start now", "add pictures", "practice first"]}], "phrases": [{"en": "Let's work together on this.", "zh": "我們一起做這個吧。", "tag": "邀請", "level": 1, "survival": true, "homophone": "類次 沃兒克 兔給得兒 安 利斯。"}, {"en": "What's our topic?", "zh": "我們的主題是什麼？", "tag": "提問", "level": 1, "survival": true, "homophone": "華資 奧兒 拓匹克？"}, {"en": "Which part do you want to do?", "zh": "你想負責哪個部分？", "tag": "分工", "level": 2, "survival": true, "homophone": "位取 帕特 賭 呦 王特 兔 賭？"}, {"en": "I'll do this part.", "zh": "這部分我來做。", "tag": "分工", "level": 1, "survival": false, "homophone": "愛歐 賭 利斯 帕特。"}, {"en": "I think that's a good idea.", "zh": "我覺得那是個好主意。", "tag": "回應", "level": 1, "survival": false, "homophone": "愛 施因克 賽茲 阿 古得 愛低兒。"}, {"en": "Can you make the slides?", "zh": "你可以做投影片嗎？", "tag": "請求", "level": 1, "survival": false, "homophone": "肯 呦 妹克 得 斯萊資？"}, {"en": "When is it due?", "zh": "什麼時候要交？", "tag": "提問", "level": 1, "survival": false, "homophone": "昏 意茲 意特 丟？"}, {"en": "Let's meet after school.", "zh": "我們放學後碰面吧。", "tag": "安排", "level": 1, "survival": false, "homophone": "類次 密特 阿夫特 斯庫兒。"}, {"en": "I don't really agree with that.", "zh": "我不太同意那個想法。", "tag": "回應", "level": 1, "survival": false, "homophone": "愛 動恩特 瑞兒里 阿哥瑞 位斯 賽特。"}, {"en": "Who wants to present first?", "zh": "誰想先上台報告？", "tag": "分工", "level": 1, "survival": false}, {"en": "Maybe we should add some examples.", "zh": "也許我們該加一些例子。", "tag": "建議", "level": 1, "survival": false}, {"en": "Let's practice before the presentation.", "zh": "報告前我們先練習一下吧。", "tag": "安排", "level": 1, "survival": false}], "dialogue": {"title": "分組報告 情境對話", "youRole": "學生", "npcRole": "組員", "lines": [{"who": "you", "en": "Hey, our topic is animals in danger. Where should we start?", "zh": "嘿，我們的主題是瀕危動物。我們該從哪裡開始？"}, {"who": "npc", "en": "Good question. Let's split up the work first.", "zh": "好問題。我們先來分工吧。"}, {"who": "you", "en": "Okay. I can do the research and find some facts.", "zh": "好。我可以負責找資料和一些事實。"}, {"who": "npc", "en": "Great. Then I'll make the slides.", "zh": "太好了。那我來做投影片。"}, {"who": "you", "en": "I think we should add some pictures too.", "zh": "我覺得我們也應該加一些圖片。"}, {"who": "npc", "en": "Good idea. Pictures make it more interesting.", "zh": "好主意。有圖片會更有趣。"}, {"who": "you", "en": "By the way, when is it due?", "zh": "對了，這個什麼時候要交？"}, {"who": "npc", "en": "Next Friday, so we still have time.", "zh": "下週五，所以我們還有時間。"}, {"who": "you", "en": "Let's meet after school on Wednesday to practice.", "zh": "我們週三放學後碰面練習吧。"}, {"who": "npc", "en": "Sounds good. See you then!", "zh": "聽起來不錯。到時候見！"}]}, "country": "US"}, {"id": "late-absent", "icon": "⏰", "title": "遲到請假", "titleEn": "Late & Absent", "desc": "上學遲到、生病請假、缺席後補交作業時跟老師說明", "words": [{"en": "late", "zh": "遲到的", "ico": "⏰"}, {"en": "absent", "zh": "缺席的", "ico": "🚪"}, {"en": "sick", "zh": "生病的", "ico": "🤒"}, {"en": "sorry", "zh": "抱歉", "ico": "🙏"}, {"en": "excuse", "zh": "理由；請假單", "ico": "📝"}, {"en": "homework", "zh": "作業", "ico": "📚"}, {"en": "bus", "zh": "公車", "ico": "🚌"}, {"en": "doctor", "zh": "醫生", "ico": "👨‍⚕️"}], "patterns": [{"en": "Sorry I'm late, I ___.", "zh": "抱歉我遲到了，我___。", "slots": ["missed the bus", "overslept", "wasn't feeling well"]}, {"en": "I was absent because I ___.", "zh": "我缺席是因為我___。", "slots": ["was sick", "had a fever", "went to the doctor"]}], "phrases": [{"en": "Sorry I'm late.", "zh": "抱歉我遲到了。", "tag": "道歉", "level": 1, "survival": true, "homophone": "蒐瑞 愛姆 累特。"}, {"en": "I was sick yesterday.", "zh": "我昨天生病了。", "tag": "說明", "level": 1, "survival": true, "homophone": "愛 瓦資 系克 耶斯特得。"}, {"en": "Can I come in?", "zh": "我可以進來嗎？", "tag": "請求", "level": 1, "survival": true, "homophone": "肯 愛 康 引？"}, {"en": "I missed the bus this morning.", "zh": "我今天早上錯過了公車。", "tag": "原因", "level": 1, "survival": false, "homophone": "愛 密斯特 得 巴斯 利斯 摸寧。"}, {"en": "I'm sorry, it won't happen again.", "zh": "對不起，不會再發生了。", "tag": "道歉", "level": 1, "survival": false, "homophone": "愛姆 蒐瑞，意特 沃恩特 黑噴 阿根。"}, {"en": "I wasn't feeling well yesterday.", "zh": "我昨天身體不舒服。", "tag": "說明", "level": 1, "survival": false, "homophone": "愛 瓦任特 費零 威爾 耶斯特得。"}, {"en": "Here is my excuse note from my mom.", "zh": "這是我媽媽寫的請假單。", "tag": "請假", "level": 2, "survival": false, "homophone": "希爾 意茲 麥 一克斯Q斯 諾特 防 麥 媽媽。"}, {"en": "Can I hand in my homework late?", "zh": "我可以晚一點交作業嗎？", "tag": "請求", "level": 2, "survival": false, "homophone": "肯 愛 漢得 引 麥 齁沃克 累特？"}, {"en": "I overslept because my alarm didn't go off.", "zh": "我睡過頭了，因為鬧鐘沒響。", "tag": "原因", "level": 2, "survival": false}, {"en": "I need to make up the homework I missed.", "zh": "我需要補交我缺交的作業。", "tag": "補交", "level": 2, "survival": false}, {"en": "I had a fever, so I went to see the doctor.", "zh": "我發燒了，所以去看了醫生。", "tag": "說明", "level": 2, "survival": false}, {"en": "Could you please tell me what I missed in class?", "zh": "可以請您告訴我課堂上漏掉了什麼嗎？", "tag": "請求", "level": 2, "survival": false}], "dialogue": {"title": "遲到請假 情境對話", "youRole": "學生", "npcRole": "老師", "lines": [{"who": "you", "en": "Sorry I'm late, Miss Lin.", "zh": "林老師，抱歉我遲到了。"}, {"who": "npc", "en": "It's okay. What happened?", "zh": "沒關係。發生什麼事了？"}, {"who": "you", "en": "I missed the bus this morning.", "zh": "我今天早上錯過了公車。"}, {"who": "npc", "en": "I see. Please take your seat.", "zh": "了解。請坐到你的位子吧。"}, {"who": "you", "en": "Also, I was absent yesterday because I was sick.", "zh": "還有，我昨天生病所以缺席了。"}, {"who": "npc", "en": "Are you feeling better now?", "zh": "你現在好一點了嗎？"}, {"who": "you", "en": "Yes, thank you. Here is my excuse note.", "zh": "好多了，謝謝老師。這是我的請假單。"}, {"who": "npc", "en": "Great. Don't forget you missed some homework.", "zh": "很好。別忘了你有作業沒交。"}, {"who": "you", "en": "I know. Can I make it up by Friday?", "zh": "我知道。我可以在星期五前補交嗎？"}, {"who": "npc", "en": "Sure. Hand it in by Friday and you'll be fine.", "zh": "當然。星期五前交來就沒問題了。"}]}, "country": "US"}, {"id": "library", "icon": "📚", "title": "圖書館", "titleEn": "At the Library", "desc": "在圖書館借還書、找書、續借與逾期時會用到的說法", "words": [{"en": "library", "zh": "圖書館", "ico": "📚"}, {"en": "book", "zh": "書", "ico": "📖"}, {"en": "borrow", "zh": "借（出）", "ico": "🙌"}, {"en": "return", "zh": "歸還", "ico": "↩️"}, {"en": "librarian", "zh": "圖書館員", "ico": "🧑‍🏫"}, {"en": "shelf", "zh": "書架", "ico": "🗄️"}, {"en": "due date", "zh": "到期日", "ico": "📅"}, {"en": "quiet", "zh": "安靜的", "ico": "🤫"}], "patterns": [{"en": "Where can I find ___?", "zh": "我在哪裡可以找到 ___？", "slots": ["English books", "the science section", "this magazine"]}, {"en": "Can I ___ this book?", "zh": "我可以 ___ 這本書嗎？", "slots": ["borrow", "renew", "return"]}], "phrases": [{"en": "I'd like to borrow these books.", "zh": "我想借這幾本書。", "tag": "借書", "level": 1, "survival": true, "homophone": "愛的 賴克 兔 波柔 利斯 布克斯。"}, {"en": "Where can I return this book?", "zh": "我要在哪裡還這本書？", "tag": "還書", "level": 1, "survival": true, "homophone": "昧兒 肯 愛 里透恩 利斯 布克？"}, {"en": "Excuse me, could you help me find a book?", "zh": "不好意思，你可以幫我找一本書嗎？", "tag": "求助", "level": 2, "survival": true, "homophone": "一克斯Q斯 密，苦揪 黑而普 密 凡得 阿 布克？"}, {"en": "Here is my library card.", "zh": "這是我的借書證。", "tag": "借書", "level": 1, "survival": false, "homophone": "希爾 意茲 麥 賴布瑞瑞 卡兒得。"}, {"en": "When is this book due?", "zh": "這本書什麼時候到期？", "tag": "借閱期限", "level": 1, "survival": false, "homophone": "昏 意茲 利斯 布克 丟？"}, {"en": "How many books can I borrow at once?", "zh": "我一次可以借幾本書？", "tag": "借書", "level": 2, "survival": false, "homophone": "好 沒尼 布克斯 肯 愛 波柔 阿特 萬斯？"}, {"en": "Can I renew this book?", "zh": "我可以續借這本書嗎？", "tag": "續借", "level": 1, "survival": false, "homophone": "肯 愛 瑞紐 利斯 布克？"}, {"en": "I think this book is on the wrong shelf.", "zh": "我覺得這本書放錯書架了。", "tag": "找書", "level": 2, "survival": false, "homophone": "愛 施因克 利斯 布克 意茲 安 得 弱翁 誰福。"}, {"en": "I'm sorry, my book is a few days overdue.", "zh": "抱歉，我的書逾期幾天了。", "tag": "逾期", "level": 2, "survival": false}, {"en": "Is there a fine for returning it late?", "zh": "還書遲了會有罰款嗎？", "tag": "逾期", "level": 2, "survival": false}, {"en": "Please keep your voice down in the reading area.", "zh": "在閱讀區請小聲一點。", "tag": "安靜", "level": 2, "survival": false}, {"en": "Could you tell me where the science section is?", "zh": "可以告訴我科學類的書區在哪裡嗎？", "tag": "找書", "level": 2, "survival": false}], "dialogue": {"title": "圖書館 情境對話", "youRole": "學生", "npcRole": "圖書館員", "lines": [{"who": "you", "en": "Hi, I'd like to borrow these three books.", "zh": "你好，我想借這三本書。"}, {"who": "npc", "en": "Sure. May I see your library card, please?", "zh": "好的。可以看一下你的借書證嗎？"}, {"who": "you", "en": "Here you go. When are they due?", "zh": "在這裡。它們什麼時候到期？"}, {"who": "npc", "en": "They're due in two weeks, on July 18th.", "zh": "兩週後到期，也就是七月十八號。"}, {"who": "you", "en": "Can I renew them if I need more time?", "zh": "如果我需要更多時間，可以續借嗎？"}, {"who": "npc", "en": "Yes, you can renew each book once online.", "zh": "可以，每本書都能在線上續借一次。"}, {"who": "you", "en": "Great. What happens if a book is overdue?", "zh": "太好了。如果書逾期了會怎麼樣？"}, {"who": "npc", "en": "There's a small fine of one dollar per day.", "zh": "會有一天一元的小額罰款。"}, {"who": "you", "en": "Got it. Thank you for your help!", "zh": "了解了，謝謝你的幫忙！"}, {"who": "npc", "en": "You're welcome. Please remember to stay quiet inside.", "zh": "不客氣。館內請記得保持安靜喔。"}]}, "country": "US"}, {"id": "school-lunch", "icon": "🍱", "title": "午餐時間", "titleEn": "School Lunch", "desc": "學校午餐打菜、分食與收拾餐具時會用到的英語", "words": [{"en": "lunch", "zh": "午餐", "ico": "🍱"}, {"en": "tray", "zh": "餐盤", "ico": "🍽️"}, {"en": "rice", "zh": "白飯", "ico": "🍚"}, {"en": "soup", "zh": "湯", "ico": "🥣"}, {"en": "chopsticks", "zh": "筷子", "ico": "🥢"}, {"en": "serve", "zh": "打菜／盛飯", "ico": "🍲"}, {"en": "hungry", "zh": "餓的", "ico": "😋"}, {"en": "leftovers", "zh": "剩菜", "ico": "🗑️"}], "patterns": [{"en": "Can I have some more ___, please?", "zh": "我可以多要一點___嗎？", "slots": ["rice", "soup", "vegetables"]}, {"en": "Do you want to eat my ___?", "zh": "你要不要吃我的___？", "slots": ["carrots", "meat", "dessert"]}], "phrases": [{"en": "It's lunchtime!", "zh": "午餐時間到了！", "tag": "開場", "level": 1, "survival": true, "homophone": "意茲 藍取太姆！"}, {"en": "I'm so hungry.", "zh": "我好餓。", "tag": "表達", "level": 1, "survival": true, "homophone": "愛姆 蒐 航格瑞。"}, {"en": "Can I have some more rice, please?", "zh": "我可以多要一點白飯嗎？", "tag": "請求", "level": 2, "survival": true, "homophone": "肯 愛 黑夫 山姆 摩爾 萊斯，普利茲？"}, {"en": "Here's your tray.", "zh": "這是你的餐盤。", "tag": "遞送", "level": 1, "survival": false, "homophone": "希爾資 幼兒 揣。"}, {"en": "Do you want to eat my carrots?", "zh": "你要不要吃我的紅蘿蔔？", "tag": "分食", "level": 2, "survival": false, "homophone": "賭 呦 王特 兔 伊特 麥 凱瑞資？"}, {"en": "No thanks, I'm full.", "zh": "不用了，謝謝，我飽了。", "tag": "回應", "level": 1, "survival": false, "homophone": "諾 山克斯，愛姆 富。"}, {"en": "It's my turn to serve the food today.", "zh": "今天輪到我打菜。", "tag": "值日生", "level": 2, "survival": false, "homophone": "意茲 麥 特兒恩 兔 捨兒夫 得 福得 特得。"}, {"en": "Can you pass me the soup?", "zh": "你可以把湯遞給我嗎？", "tag": "請求", "level": 1, "survival": false, "homophone": "肯 呦 配斯 密 得 蘇普？"}, {"en": "This school lunch is really tasty.", "zh": "這份營養午餐真好吃。", "tag": "分享", "level": 1, "survival": false}, {"en": "Please don't waste any food.", "zh": "請不要浪費食物。", "tag": "提醒", "level": 1, "survival": false}, {"en": "Let's clear the trays and wash the chopsticks.", "zh": "我們來收餐盤、洗筷子吧。", "tag": "收拾", "level": 2, "survival": false}, {"en": "I'll take the leftovers to the kitchen.", "zh": "我來把剩菜拿去廚房。", "tag": "收拾", "level": 2, "survival": false}], "dialogue": {"title": "午餐時間 情境對話", "youRole": "學生", "npcRole": "同學", "lines": [{"who": "you", "en": "It's lunchtime! I'm so hungry.", "zh": "午餐時間到了！我好餓。"}, {"who": "npc", "en": "Me too. It's my turn to serve the food today.", "zh": "我也是。今天輪到我打菜。"}, {"who": "you", "en": "Great! Can I have some more rice, please?", "zh": "太好了！我可以多要一點白飯嗎？"}, {"who": "npc", "en": "Sure, here you go. Do you want some soup too?", "zh": "當然，給你。你也要來點湯嗎？"}, {"who": "you", "en": "Yes, please. Can you pass me the chopsticks?", "zh": "好啊，麻煩你。你可以把筷子遞給我嗎？"}, {"who": "npc", "en": "Here they are. Do you want to eat my carrots?", "zh": "在這裡。你要不要吃我的紅蘿蔔？"}, {"who": "you", "en": "No thanks, I'm full. Please don't waste any food.", "zh": "不用了，謝謝，我飽了。請不要浪費食物喔。"}, {"who": "npc", "en": "You're right. This school lunch is really tasty.", "zh": "你說得對。這份營養午餐真好吃。"}, {"who": "you", "en": "Let's clear the trays and wash the chopsticks.", "zh": "我們來收餐盤、洗筷子吧。"}, {"who": "npc", "en": "Okay, and I'll take the leftovers to the kitchen.", "zh": "好，我來把剩菜拿去廚房。"}]}, "country": "US"}, {"id": "pe-sports", "icon": "⚽", "title": "體育課", "titleEn": "P.E. & Sports", "desc": "上體育課、暖身、分隊比賽和運動時會用到的英語", "words": [{"en": "warm up", "zh": "暖身", "ico": "🤸"}, {"en": "team", "zh": "隊伍", "ico": "👥"}, {"en": "pass", "zh": "傳球", "ico": "⚽"}, {"en": "catch", "zh": "接（球）", "ico": "🧤"}, {"en": "run", "zh": "跑步", "ico": "🏃"}, {"en": "stretch", "zh": "伸展", "ico": "🧘"}, {"en": "tired", "zh": "累的", "ico": "😮‍💨"}, {"en": "whistle", "zh": "哨子", "ico": "📣"}], "patterns": [{"en": "Can I ___?", "zh": "我可以___嗎？", "slots": ["join your team", "have some water", "sit down for a minute"]}, {"en": "It's my ___.", "zh": "輪到我的___了。", "slots": ["turn", "ball", "team's point"]}], "phrases": [{"en": "Let's warm up first.", "zh": "我們先來暖身吧。", "tag": "開始", "level": 1, "survival": false, "homophone": "類次 沃兒姆 阿普 佛兒斯特。"}, {"en": "Can I join in?", "zh": "我可以加入嗎？", "tag": "請求", "level": 1, "survival": true, "homophone": "肯 愛 揪因 引？"}, {"en": "It's my turn!", "zh": "換我了！", "tag": "輪流", "level": 1, "survival": true, "homophone": "意茲 麥 特兒恩！"}, {"en": "Pass me the ball!", "zh": "把球傳給我！", "tag": "傳球", "level": 1, "survival": false, "homophone": "配斯 密 得 波！"}, {"en": "I'm so tired.", "zh": "我好累。", "tag": "感受", "level": 1, "survival": true, "homophone": "愛姆 蒐 太兒得。"}, {"en": "Good job, everyone!", "zh": "大家做得好！", "tag": "鼓勵", "level": 1, "survival": false, "homophone": "古得 假伯，艾夫瑞萬！"}, {"en": "Let's split into two teams.", "zh": "我們分成兩隊吧。", "tag": "分隊", "level": 1, "survival": false, "homophone": "類次 斯普利特 因兔 兔 提姆斯。"}, {"en": "Which team am I on?", "zh": "我在哪一隊？", "tag": "分隊", "level": 1, "survival": false, "homophone": "位取 提姆 阿姆 愛 安？"}, {"en": "Can we take a short break?", "zh": "我們可以休息一下嗎？", "tag": "請求", "level": 1, "survival": false, "homophone": "肯 威 貼克 阿 秀兒特 不瑞克？"}, {"en": "Don't forget to stretch after running.", "zh": "跑完別忘了伸展。", "tag": "提醒", "level": 1, "survival": false}, {"en": "Nice catch! You're getting better.", "zh": "接得好！你越來越厲害了。", "tag": "稱讚", "level": 1, "survival": false}, {"en": "Let's give it one more try before class ends.", "zh": "下課前我們再試一次吧。", "tag": "鼓勵", "level": 2, "survival": false}], "dialogue": {"title": "體育課 情境對話", "youRole": "學生", "npcRole": "體育老師", "lines": [{"who": "you", "en": "Good morning! Are we playing soccer today?", "zh": "老師早！我們今天要踢足球嗎？"}, {"who": "npc", "en": "Yes, but let's warm up and stretch first.", "zh": "對，不過我們先暖身和伸展。"}, {"who": "you", "en": "Okay. Can I join the blue team?", "zh": "好的。我可以加入藍隊嗎？"}, {"who": "npc", "en": "Sure. Now let's split into two teams and start.", "zh": "當然。現在我們分成兩隊開始吧。"}, {"who": "you", "en": "Pass me the ball! I'm open!", "zh": "把球傳給我！我沒人守！"}, {"who": "npc", "en": "Nice catch! Now it's your turn to shoot.", "zh": "接得好！現在換你射門。"}, {"who": "you", "en": "I scored! But I'm so tired now.", "zh": "我得分了！不過我現在好累。"}, {"who": "npc", "en": "Good job! Take a short break and drink some water.", "zh": "做得好！休息一下，喝點水吧。"}, {"who": "you", "en": "Thanks. Can we play again after the break?", "zh": "謝謝。休息後我們可以再玩一次嗎？"}, {"who": "npc", "en": "Of course. Don't forget to stretch before we finish.", "zh": "當然。結束前別忘了伸展。"}]}, "country": "US"}, {"id": "clubs", "icon": "🎨", "title": "社團活動", "titleEn": "Clubs & Activities", "desc": "報名參加社團、詢問時間與準備成果發表時用得到", "words": [{"en": "club", "zh": "社團", "ico": "🎨"}, {"en": "join", "zh": "加入", "ico": "🙋"}, {"en": "member", "zh": "社員", "ico": "🧑‍🤝‍🧑"}, {"en": "practice", "zh": "練習", "ico": "🏃"}, {"en": "meeting", "zh": "聚會", "ico": "📅"}, {"en": "president", "zh": "社長", "ico": "👑"}, {"en": "perform", "zh": "表演", "ico": "🎭"}, {"en": "fun", "zh": "有趣的", "ico": "🎉"}], "patterns": [{"en": "I want to join the ___ club.", "zh": "我想加入___社。", "slots": ["art", "music", "basketball"]}, {"en": "When do we ___?", "zh": "我們什麼時候___？", "slots": ["practice", "meet", "perform"]}], "phrases": [{"en": "I want to join the art club.", "zh": "我想加入美術社。", "tag": "報名", "level": 2, "survival": true, "homophone": "愛 王特 兔 揪因 得 阿兒特 克拉伯。"}, {"en": "How do I sign up?", "zh": "我要怎麼報名？", "tag": "報名", "level": 1, "survival": true, "homophone": "好 賭 愛 賽恩 阿普？"}, {"en": "What clubs can I join?", "zh": "我可以加入哪些社團？", "tag": "詢問", "level": 1, "survival": true, "homophone": "華特 克拉伯斯 肯 愛 揪因？"}, {"en": "Is this club fun?", "zh": "這個社團好玩嗎？", "tag": "詢問", "level": 1, "survival": false, "homophone": "意茲 利斯 克拉伯 夫恩？"}, {"en": "When does the club meet?", "zh": "社團什麼時候聚會？", "tag": "時間", "level": 1, "survival": false, "homophone": "昏 得斯 得 克拉伯 密特？"}, {"en": "How often do we practice?", "zh": "我們多久練習一次？", "tag": "時間", "level": 1, "survival": false, "homophone": "好 歐芬 賭 威 普瑞提斯？"}, {"en": "What do I need to bring?", "zh": "我需要準備什麼？", "tag": "準備", "level": 1, "survival": false, "homophone": "華特 賭 愛 逆得 兔 布靈？"}, {"en": "Do I need any experience?", "zh": "我需要有經驗嗎？", "tag": "準備", "level": 1, "survival": false, "homophone": "賭 愛 逆得 安尼 一克斯批瑞恩斯？"}, {"en": "Can I try it before I join?", "zh": "加入前我可以先試試看嗎？", "tag": "詢問", "level": 2, "survival": false}, {"en": "I'm a little nervous about performing.", "zh": "我對表演有點緊張。", "tag": "心情", "level": 1, "survival": false}, {"en": "When is our final show?", "zh": "我們的成果發表是什麼時候？", "tag": "成果", "level": 1, "survival": false}, {"en": "I can't wait to perform on stage!", "zh": "我等不及要上台表演了！", "tag": "心情", "level": 2, "survival": false}], "dialogue": {"title": "社團活動 情境對話", "youRole": "學生", "npcRole": "社長", "lines": [{"who": "you", "en": "Hi, I want to join the art club. Is it still open?", "zh": "你好，我想加入美術社。還可以報名嗎？"}, {"who": "npc", "en": "Yes, we're still taking new members. Welcome!", "zh": "可以，我們還在收新社員。歡迎你！"}, {"who": "you", "en": "Great! When does the club meet?", "zh": "太好了！社團什麼時候聚會？"}, {"who": "npc", "en": "We meet every Wednesday after school.", "zh": "我們每週三放學後聚會。"}, {"who": "you", "en": "What do I need to bring to practice?", "zh": "練習時我需要準備什麼？"}, {"who": "npc", "en": "Just bring a pencil and your notebook. We'll give you the rest.", "zh": "只要帶鉛筆和筆記本就好，其他的我們會提供。"}, {"who": "you", "en": "Do I need any experience to join?", "zh": "加入需要有經驗嗎？"}, {"who": "npc", "en": "Not at all. We'll teach you step by step.", "zh": "完全不用，我們會一步一步教你。"}, {"who": "you", "en": "When is our final show?", "zh": "我們的成果發表是什麼時候？"}, {"who": "npc", "en": "It's at the end of the semester. I'm sure you'll do great!", "zh": "在學期末。我相信你一定會表現得很棒！"}]}, "country": "US"}];
 const SCENARIOS = window.__SCENARIOS__;
 const REF = window.__REF__;
 const $ = s=>document.querySelector(s);
@@ -353,13 +363,13 @@ function scenList(){return SCENARIOS.filter(sc=>!band().hide.includes(sc.id))}
 function phraseOK(p){return band().levels.includes(p.level||2)||p.survival}
 function visPhrases(sc){return sc.phrases.map((p,i)=>({p,i})).filter(o=>phraseOK(o.p))}
 
-const G = JSON.parse(localStorage.getItem('trip_en_global')||'null') || {
+const G = JSON.parse(localStorage.getItem('campus_en_global')||'null') || {
   profiles:[{id:'p1',name:'我',emoji:'🙂'}], current:'p1', dark:false
 };
-function saveG(){localStorage.setItem('trip_en_global',JSON.stringify(G))}
+function saveG(){localStorage.setItem('campus_en_global',JSON.stringify(G))}
 
 let S;
-function pKey(id){return 'trip_en_'+id}
+function pKey(id){return 'campus_en_'+id}
 function loadProfile(id){
   S = JSON.parse(localStorage.getItem(pKey(id))||'null') || {};
   S.cards=S.cards||{}; S.favs=S.favs||[]; S.streakDates=S.streakDates||[]; S.dailyCount=S.dailyCount||{};
@@ -377,8 +387,23 @@ function grade(sid,i,ok){
   countStudy();saveS();
 }
 function countStudy(){const t=todayStr();S.dailyCount[t]=(S.dailyCount[t]||0)+1;if(!S.streakDates.includes(t))S.streakDates.push(t);}
-function streak(){
+function freezeAvailable(){return !S.lastFreeze || (Date.now()-S.lastFreeze)>=7*864e5;}
+function canRescueStreak(){return streakRaw()===0 && (S.streakDates||[]).length>0 && freezeAvailable();}
+function useFreeze(){
+  if(!freezeAvailable()){toast('補打卡每週只能用一次 🛡️');return;}
+  S.frozenDates=S.frozenDates||[];
+  const d=new Date();d.setDate(d.getDate()-1);const y=fmt(d);
+  if(!S.streakDates.includes(y)&&!S.frozenDates.includes(y))S.frozenDates.push(y);
+  S.lastFreeze=Date.now();saveS();renderHome();toast('🛡️ 已補回昨天，連續紀錄保住了！');
+}
+function streakRaw(){
   const set=new Set(S.streakDates);let n=0;const d=new Date();let key=todayStr();
+  if(!set.has(key)){d.setDate(d.getDate()-1);key=fmt(d);if(!set.has(key))return 0;}
+  while(set.has(key)){n++;d.setDate(d.getDate()-1);key=fmt(d);}
+  return n;
+}
+function streak(){
+  const set=new Set([...(S.streakDates||[]),...(S.frozenDates||[])]);let n=0;const d=new Date();let key=todayStr();
   if(!set.has(key)){d.setDate(d.getDate()-1);key=fmt(d);if(!set.has(key))return 0;}
   while(set.has(key)){n++;d.setDate(d.getDate()-1);key=fmt(d);}
   return n;
@@ -431,6 +456,14 @@ function renderHome(){
   renderTopStats();
   const due=dueCards().length,done=S.dailyCount[todayStr()]||0;
   let b='';
+  if(G.trip&&G.trip.date){
+    const d=tripDays();
+    const todo=tripScenarios().filter(sc=>scenarioPct(sc)<100).slice(0,3).map(sc=>sc.icon+sc.title).join('、')||'重點都練完了 🎉';
+    b+=`<div class="banner trip"><div class="big">✈️</div><div class="t"><b>${d>0?`距離出發還有 ${d} 天`:d===0?'今天出發！':'旅程進行中'}${G.trip.dest?' · '+G.trip.dest:''}</b><small>今天先練：${todo}</small></div><button class="go" onclick="openCheatSheet()">速記卡</button></div>`;
+  }else{
+    b+=`<div class="banner trip"><div class="big">✈️</div><div class="t"><b>設定這趟旅程</b><small>選出發日＋旅遊型態，我幫你排練習順序＋做行前速記卡</small></div><button class="go" onclick="openTripWizard()">開始</button></div>`;
+  }
+  if(canRescueStreak())b+=`<div class="banner sos"><div class="big">🛡️</div><div class="t"><b>連續紀錄快斷了！</b><small>昨天沒練？用補打卡救回來（每週 1 次）</small></div><button class="go" onclick="useFreeze()">補打卡</button></div>`;
   if(due>0)b+=`<div class="banner rev"><div class="big">🔁</div><div class="t"><b>今天有 ${due} 張卡該複習</b><small>趁記憶還在時複習最有效</small></div><button class="go" onclick="startReview()">開始</button></div>`;
   if(done<S.goal)b+=`<div class="banner"><div class="big">🎯</div><div class="t"><b>今日進度 ${done}/${S.goal}</b><small>再練 ${S.goal-done} 張就達標，維持連續打卡 🔥</small></div><button class="go" onclick="startDaily()">今日練習</button></div>`;
   else b+=`<div class="banner"><div class="big">🎉</div><div class="t"><b>今日目標達成！${streak()} 天連續</b><small>還想練可繼續挑戰任一關卡</small></div></div>`;
@@ -449,22 +482,195 @@ function renderHome(){
   }).join('');
 }
 
+/* ===== 行前倒數精靈 ===== */
+const TRIP_TYPES=[
+  {k:'family',emoji:'👨‍👩‍👧',label:'帶小孩/長輩',sc:['hotel-checkin','room-service','pharmacy','attractions','cafe-fastfood']},
+  {k:'drive',emoji:'🚗',label:'自駕租車',sc:['car-rental','driving-gas','transport']},
+  {k:'transit',emoji:'🚆',label:'大眾運輸',sc:['transport','taxi']},
+  {k:'backpack',emoji:'🎒',label:'背包自助',sc:['transport','taxi','shopping','baggage']},
+  {k:'business',emoji:'💼',label:'商務出差',sc:['taxi','hotel-checkin','cafe-fastfood','flight-trouble']},
+  {k:'medical',emoji:'🏥',label:'醫療備援',sc:['pharmacy','doctor']}
+];
+const TRIP_CORE=['airport-checkin','immigration','restaurant','directions','money','sim-internet','emergency','safety'];
+function tripDays(){if(!G.trip||!G.trip.date)return null;const d=new Date(G.trip.date+'T00:00:00');const now=new Date();now.setHours(0,0,0,0);return Math.round((d-now)/864e5);}
+function tripScenarios(){
+  if(!G.trip)return [];
+  const set=new Set(TRIP_CORE);
+  (G.trip.types||[]).forEach(k=>{const t=TRIP_TYPES.find(x=>x.k===k);if(t)t.sc.forEach(s=>set.add(s));});
+  return SCENARIOS.filter(sc=>set.has(sc.id));
+}
+function openTripWizard(){
+  const t=G.trip||{dest:'',date:'',types:[]};
+  const inner=`<div style="padding:4px 4px 20px">
+    <div class="wzq">✈️ 這趟去哪裡？<small>（可留白）</small></div>
+    <input id="wzDest" class="wzin" placeholder="例：日本東京、義大利、美國" value="${(t.dest||'').replace(/"/g,'&quot;')}">
+    <div class="wzq">📅 哪天出發？</div>
+    <input id="wzDate" class="wzin" type="date" value="${t.date||''}">
+    <div class="wzq">🧳 這趟會遇到哪些狀況？<small>（可複選，機場/海關/點餐/問路/緊急已自動含）</small></div>
+    <div class="wzchips">${TRIP_TYPES.map(x=>`<button type="button" class="wzchip ${(t.types||[]).includes(x.k)?'on':''}" data-k="${x.k}" onclick="this.classList.toggle('on')">${x.emoji} ${x.label}</button>`).join('')}</div>
+    ${G.trip?`<div style="text-align:center;margin-top:22px"><button class="back" style="color:var(--bad);justify-content:center" onclick="clearTrip()">🗑️ 清除這趟旅程</button></div>`:''}
+  </div>`;
+  const foot=`<button class="pbtn ghost" onclick="closeOverlay()">取消</button><button class="pbtn" onclick="saveTrip()">產生行前清單 ›</button>`;
+  $('#overlayMount').innerHTML=`<div class="overlay"><div class="ovhead"><button class="x" onclick="closeOverlay()">✕</button><div class="cnt" style="flex:1;text-align:center">✈️ 行前規劃</div></div><div class="ovbody" style="display:block;overflow:auto">${inner}</div><div class="ovfoot">${foot}</div></div>`;
+}
+function saveTrip(){
+  const dest=$('#wzDest').value.trim();
+  const date=$('#wzDate').value;
+  const types=[...document.querySelectorAll('.wzchip.on')].map(b=>b.dataset.k);
+  if(!date){toast('請先選出發日期 📅');return;}
+  G.trip={dest,date,types};saveG();closeOverlay();renderHome();openCheatSheet();
+}
+function clearTrip(){G.trip=null;saveG();closeOverlay();renderHome();toast('已清除旅程規劃');}
+function cheatRow(en,zh,homo){return `<div class="cheatrow"><div style="flex:1;min-width:0"><div class="cen">${en}</div><div class="czh">${zh}${homo?' ・ '+homo:''}</div></div><button class="rbtn" onclick="say(${esc(en)})">🔊</button></div>`;}
+function openCheatSheet(){
+  if(!G.trip){openTripWizard();return;}
+  const scs=tripScenarios();const days=tripDays();
+  let body=`<div style="padding:0 2px 24px">
+    <div class="section-title" style="margin-top:8px">🪧 行前速記卡${G.trip.dest?' · '+G.trip.dest:''}${days!=null?` · 剩 ${days} 天`:''}</div>
+    <p style="color:var(--sub);font-size:.8rem;margin:0 4px 10px">截圖存到相簿，臨場翻最快；每句點 🔊 播放或把螢幕轉給對方看。<button class="back" style="display:inline-flex;color:var(--sky)" onclick="openTripWizard()">✏️ 改行程</button></p>`;
+  body+=`<div class="cheatsc">🗣️ 卡住時救急</div>`+REPAIR.slice(0,6).map(o=>cheatRow(o.en,o.zh,o.homophone)).join('');
+  scs.forEach(sc=>{
+    const surv=sc.phrases.filter(p=>p.survival);
+    const rows=surv.length?surv:sc.phrases.slice(0,4);
+    body+=`<div class="cheatsc">${sc.icon} ${sc.title}</div>`+rows.map(p=>cheatRow(p.en,p.zh,p.homophone)).join('');
+  });
+  body+='</div>';
+  $('#overlayMount').innerHTML=`<div class="overlay"><div class="ovhead"><button class="x" onclick="closeOverlay()">✕</button><div class="cnt" style="flex:1;text-align:center">🪧 行前速記卡</div></div><div class="ovbody" style="display:block;overflow:auto">${body}</div></div>`;
+}
+
+/* ===== 兒童遊戲層：聽聲點圖 + 貼紙 + 走失卡 ===== */
+const STICKER_POOL=['🐶','🐱','🦄','🐼','🦁','🐸','🐙','🦖','🌈','⭐','🍦','🎈','🚀','🐧','🦉','🐢','🌸','🍩','🐳','🦋'];
+let KG=null;
+function allKidWords(){const a=[];SCENARIOS.forEach(sc=>(sc.words||[]).forEach(w=>{if(w.ico)a.push(w)}));return a;}
+function scHasKidGame(sc){return (sc.words||[]).filter(w=>w.ico).length>=1;}
+function startKidGame(){
+  const pool=(curScenario.words||[]).filter(w=>w.ico);
+  if(!pool.length){toast('這關暫無圖卡遊戲');return;}
+  KG={sc:curScenario,items:shuffle(pool.slice()),idx:0,correct:0,rounds:Math.min(pool.length,8)};
+  drawKidGame();
+}
+function drawKidGame(){
+  if(KG.idx>=KG.rounds){finishKidGame();return;}
+  const target=KG.items[KG.idx];
+  const others=shuffle(allKidWords().filter(w=>w.ico!==target.ico&&w.en!==target.en)).slice(0,3);
+  const opts=shuffle([target,...others]);
+  const pct=Math.round(KG.idx/KG.rounds*100);
+  const grid=opts.map(o=>`<button class="kgopt" onclick="kidPick(this,${o.en===target.en?1:0})"><div class="kgico">${o.ico}</div><div class="kgzh">${o.zh}</div></button>`).join('');
+  const inner=`<div style="text-align:center;margin:8px 0 4px"><button class="mic" style="width:76px;height:76px;font-size:32px;margin:0 auto" onclick="say(${esc(target.en)})">🔊</button><div class="qsub" style="margin-top:10px;font-size:1rem">聽聲音，點出對的圖！</div></div><div class="kggrid">${grid}</div>`;
+  $('#overlayMount').innerHTML=`<div class="overlay"><div class="ovhead"><button class="x" onclick="KG=null;closeOverlay()">✕</button><div class="ovprog"><i style="width:${pct}%"></i></div><div class="cnt">🎮 ${KG.idx+1}/${KG.rounds}</div></div><div class="ovbody">${inner}</div><div class="ovfoot"></div></div>`;
+  setTimeout(()=>say(target.en),250);
+}
+function kidPick(el,correct){
+  if(el.disabled||el.parentElement.dataset.done)return;
+  if(correct){el.classList.add('kgok');el.parentElement.dataset.done=1;KG.correct++;confetti();heart(el);countStudy();saveS();
+    setTimeout(()=>{KG.idx++;drawKidGame();},650);
+  }else{el.classList.add('kgbad');el.disabled=true;el.style.opacity=.4;}
+}
+function awardSticker(){
+  S.stickers=S.stickers||[];
+  const st=STICKER_POOL[Math.floor(Math.random()*STICKER_POOL.length)];
+  S.stickers.push(st);saveS();return st;
+}
+function finishKidGame(){
+  const st=awardSticker();confetti();
+  const inner=`<div class="flash"><div style="font-size:76px">${st}</div><div class="big-en">太棒了！</div>
+    <div class="card3d" style="min-height:auto;gap:6px"><div style="font-size:.95rem;color:var(--sub)">你得到一張新貼紙 ${st}</div>
+    <div style="font-size:.9rem;color:var(--sub)">貼紙簿現在有 <b style="color:var(--sky);font-size:1.3rem">${(S.stickers||[]).length}</b> 張！</div></div></div>`;
+  $('#overlayMount').innerHTML=ovShell(inner,`<button class="pbtn ghost" onclick="openStickerBook()">看貼紙簿</button><button class="pbtn" onclick="startKidGame()">再玩一次</button>`);
+  KG=null;awardBadges();
+}
+function openStickerBook(){
+  const st=S.stickers||[];
+  const inner=`<div style="padding:6px 4px 24px"><div class="section-title" style="margin-top:8px">🎉 我的貼紙簿（${st.length} 張）</div>${st.length?`<div class="stickerbook">${st.map(s=>`<div class="stik">${s}</div>`).join('')}</div>`:'<p class="qsub" style="text-align:center;margin-top:36px">玩「🎮 單字遊戲」就能收集貼紙喔！</p>'}</div>`;
+  $('#overlayMount').innerHTML=`<div class="overlay"><div class="ovhead"><button class="x" onclick="closeOverlay()">✕</button><div class="cnt" style="flex:1;text-align:center">🎉 貼紙簿</div></div><div class="ovbody" style="display:block;overflow:auto">${inner}</div></div>`;
+}
+function setParentPhone(){
+  const v=prompt('輸入爸爸／媽媽的電話（走失時給人看、可直接撥）：',G.parentPhone||'');
+  if(v!==null){G.parentPhone=v.trim();saveG();openLostCard();}
+}
+function openLostCard(){
+  const phone=G.parentPhone||'';
+  const en=phone?`I'm lost. Please help me. Please call my mom or dad at ${phone}.`:`I'm lost. Please help me. Please call my mom or dad.`;
+  const zh='我迷路了，請幫我打電話給我爸爸媽媽。';
+  const inner=`<div class="lostcard"><div class="lem">🧒🆘</div>
+    <div class="len">${en}</div><div class="lzh">${zh}</div>
+    ${phone?`<div class="lphone">📞 ${phone}</div>`:'<div class="lzh" style="color:var(--sos)">尚未設定爸媽電話</div>'}
+    <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:8px">
+      <button class="speak" onclick="say(${esc(en)})">🔊 播放</button>
+      ${phone?`<a class="speak" style="text-decoration:none;background:var(--sos)" href="tel:${phone.replace(/[^0-9+]/g,'')}">📞 撥打</a>`:''}
+      <button class="pbtn ghost" style="width:auto;padding:12px 18px" onclick="setParentPhone()">✏️ 設定電話</button>
+    </div>
+    <div class="tello" style="margin-top:6px">迷路時把這頁轉給大人看，或按📞直接打給爸媽</div></div>`;
+  $('#overlayMount').innerHTML=`<div class="overlay"><div class="ovhead"><button class="x" onclick="closeOverlay()">✕</button><div class="cnt" style="flex:1;text-align:center">🧒 走失自保卡</div></div><div class="ovbody">${inner}</div></div>`;
+}
+
+/* ===== 個人化救命資料卡 ===== */
+function meLines(){
+  const m=G.me||{};const L=[];
+  if(m.name)L.push({en:`My name is ${m.name}.`,zh:`我叫 ${m.name}。`});
+  if(m.family)L.push({en:`There are ${m.family} of us.`,zh:`我們一共 ${m.family} 位。`});
+  if(m.allergy)L.push({en:`I'm allergic to ${m.allergy}. Please make sure my food has none.`,zh:`我對 ${m.allergy} 過敏，請確認食物裡沒有。`,sos:true});
+  if(m.blood)L.push({en:`My blood type is ${m.blood}.`,zh:`我的血型是 ${m.blood}。`,sos:true});
+  if(m.hotel)L.push({en:`I'm staying at ${m.hotel}.`,zh:`我住在 ${m.hotel}。`});
+  if(G.parentPhone)L.push({en:`Please call this number: ${G.parentPhone}.`,zh:`請打這個電話：${G.parentPhone}。`,sos:true});
+  return L;
+}
+function openMeSetup(){
+  const m=G.me||{};const v=s=>(s||'').replace(/"/g,'&quot;');
+  const f=(id,lab,ph,val)=>`<div class="wzq">${lab}</div><input id="${id}" class="wzin" placeholder="${ph}" value="${v(val)}">`;
+  const inner=`<div style="padding:4px 4px 20px">
+    ${f('meName','🙋 姓名（拼音）','例：Wang Xiaoming',m.name)}
+    ${f('meFamily','👨‍👩‍👧 同行人數','例：4',m.family)}
+    ${f('meAllergy','⚠️ 過敏原（最重要）','例：peanuts, seafood',m.allergy)}
+    ${f('meBlood','🩸 血型','例：O, A, B, AB',m.blood)}
+    ${f('meHotel','🏨 這趟住哪（飯店名/地址）','例：Grand Hotel Tokyo',m.hotel)}
+    ${f('mePhone','📞 緊急聯絡電話','例：0912345678',G.parentPhone)}
+  </div>`;
+  const foot=`<button class="pbtn ghost" onclick="closeOverlay()">取消</button><button class="pbtn" onclick="saveMe()">儲存 ›</button>`;
+  $('#overlayMount').innerHTML=`<div class="overlay"><div class="ovhead"><button class="x" onclick="closeOverlay()">✕</button><div class="cnt" style="flex:1;text-align:center">🪪 我的旅遊資料</div></div><div class="ovbody" style="display:block;overflow:auto">${inner}</div><div class="ovfoot">${foot}</div></div>`;
+}
+function saveMe(){
+  G.me={name:$('#meName').value.trim(),family:$('#meFamily').value.trim(),allergy:$('#meAllergy').value.trim(),blood:$('#meBlood').value.trim(),hotel:$('#meHotel').value.trim()};
+  const ph=$('#mePhone').value.trim();if(ph)G.parentPhone=ph;
+  saveG();closeOverlay();openMeCard();
+}
+function openMeCard(){
+  const L=meLines();
+  let body=`<div style="padding:0 2px 24px"><div class="section-title" style="margin-top:8px">🪪 我的旅遊資料卡</div>
+    <p style="color:var(--sub);font-size:.8rem;margin:0 4px 10px">填自己的真實資訊，緊急時把螢幕轉給對方看最快。<button class="back" style="display:inline-flex;color:var(--sky)" onclick="openMeSetup()">✏️ 編輯</button></p>`;
+  if(!L.length){body+=`<p class="qsub" style="text-align:center;margin-top:30px">還沒填資料，點上面「✏️ 編輯」開始（過敏原、血型最救命）</p>`;}
+  else body+=L.map(o=>`<div class="cheatrow"${o.sos?' style="border-left:4px solid var(--sos)"':''}><div style="flex:1;min-width:0"><div class="cen">${o.en}</div><div class="czh">${o.zh}</div></div><button class="rbtn" onclick="say(${esc(o.en)})">🔊</button></div>`).join('');
+  body+='</div>';
+  $('#overlayMount').innerHTML=`<div class="overlay"><div class="ovhead"><button class="x" onclick="closeOverlay()">✕</button><div class="cnt" style="flex:1;text-align:center">🪪 我的資料卡</div></div><div class="ovbody" style="display:block;overflow:auto">${body}</div></div>`;
+}
+
+const REPAIR=[
+  {en:"Sorry? Could you say that again?",zh:"抱歉？可以再說一次嗎？",homophone:"搜瑞 庫揪 誰 類特 阿乾"},
+  {en:"Could you speak more slowly, please?",zh:"可以請你說慢一點嗎？",homophone:"庫揪 斯必克 摩爾 斯樓利 普利司"},
+  {en:"I don't understand.",zh:"我聽不懂。",homophone:"愛 動特 安得斯天"},
+  {en:"My English isn't very good.",zh:"我英文不太好。",homophone:"麥 英格利許 伊怎 崴瑞 估的"},
+  {en:"Could you write it down here?",zh:"可以幫我寫在這裡嗎？",homophone:"庫揪 瑞特 一特 黨 希爾"},
+  {en:"How do you spell that?",zh:"那個怎麼拼？",homophone:"好 賭 优 斯貝爾 類特"},
+  {en:"Let me show you on my phone.",zh:"我用手機給你看。",homophone:"賴特 密 秀 优 昂 麥 佛恩"},
+  {en:"Do you speak Chinese?",zh:"你會說中文嗎？",homophone:"賭 优 斯必克 拆尼斯"},
+  {en:"Just a moment, please.",zh:"請稍等一下。",homophone:"賈斯特 阿 摩門特 普利司"},
+  {en:"Can you help me, please?",zh:"可以請你幫我嗎？",homophone:"肯 优 黑歐普 密 普利司"}
+];
 function renderSOS(){
   renderTopStats();setNav('sos');
   const surv=[];scenList().forEach(sc=>sc.phrases.forEach((p,i)=>{if(p.survival)surv.push({sc,p,i})}));
-  let h=`<div class="section-title">🆘 救命 & 生存短句</div>
-    <p style="color:var(--sub);font-size:.82rem;margin:0 4px 10px">出國最該會的句子，短到能背、能指著講。點 🔊 聽發音。</p>`;
+  let h=`<div class="section-title">🗣️ 卡住時的救急句（聽不懂／講不出來就翻這頁）</div>
+    <p style="color:var(--sub);font-size:.82rem;margin:0 4px 10px">不管在哪個情境，一卡住就用這幾句。點 🔊 播放，或把螢幕轉給對方看。</p>`;
+  h+=REPAIR.map(o=>`<div class="pitem"><div class="body"><div class="en">${o.en}</div><div class="zh">${o.zh}</div><div class="homo">🗣️ ${o.homophone}</div></div><div class="acts"><button class="rbtn" onclick="say(${esc(o.en)})">🔊</button></div></div>`).join('');
+  h+=`<div class="pitem sos-item"><div class="body"><div class="en">🪪 我的旅遊資料卡</div><div class="zh">填過敏原、血型、住宿、緊急電話，緊急時給對方看</div></div><div class="acts"><button class="rbtn" onclick="openMeCard()">開</button></div></div>`;
+  h+=`<div class="pitem sos-item"><div class="body"><div class="en">🧒 兒童走失自保卡</div><div class="zh">迷路時給大人看、可一鍵撥給爸媽（先設定電話）</div></div><div class="acts"><button class="rbtn" onclick="openLostCard()">開</button></div></div>`;
+  h+=`<div class="section-title">🆘 救命 & 生存短句</div>
+    <p style="color:var(--sub);font-size:.82rem;margin:0 4px 10px">最該先學會的關鍵句，短到能背、能指著講。點 🔊 聽發音。</p>`;
   h+=surv.map(o=>`<div class="pitem sos-item"><div class="body">
       <div class="en">${o.p.en}</div><div class="zh">${o.p.zh}</div>
       ${o.p.homophone?`<div class="homo">🗣️ ${o.p.homophone}</div>`:''}
       <div class="metarow"><span style="font-size:.7rem;color:var(--sub)">${o.sc.icon} ${o.sc.title}</span></div>
     </div><div class="acts"><button class="rbtn" onclick="say(${esc(o.p.en)})">🔊</button></div></div>`).join('');
-  h+=`<div class="section-title">📞 各國緊急電話</div>`;
-  h+=`<div class="refcard"><div class="refrow" style="border:none;padding-top:0"><span style="font-size:.8rem;color:var(--sub)">慌亂時撥錯號碼會出人命，先記你要去的國家 👇</span></div>`+
-     REF.emergency.map(e=>`<div class="refrow"><span class="flag">${e.flag}</span><span class="rc">${e.police}</span><span class="rt"><b>${e.c}</b> ・ 救護：${e.amb}</span></div>`).join('')+`</div>`;
-  h+=`<p style="color:var(--sub);font-size:.78rem;margin:2px 4px 6px">💡 打電話先講「所在位置」：<b>We're near ___. / The address is ___.</b></p>`;
-  h+=`<div class="section-title">💵 小費文化（各國差很大）</div>`;
-  h+=REF.tipping.map(t=>`<div class="refcard"><h3>${t.flag} ${t.c}</h3><div class="rt" style="color:var(--sub);font-size:.85rem;margin-top:6px;line-height:1.5">${t.t}</div></div>`).join('');
   $('#view-sos').innerHTML=h;
 }
 
@@ -497,6 +703,12 @@ function renderDetail(){
   $('#view-detail').innerHTML=`
     <button class="back" onclick="go('home')">‹ 返回</button>
     <div class="detail-head"><div class="ico">${sc.icon}</div><h2>${sc.title}</h2><div class="en">${sc.titleEn} · ${vis.length} 句</div></div>
+    <div class="primcta">
+      ${S.band==='kid'&&scHasKidGame(sc)?`<button class="primbtn kid" onclick="startKidGame()">🎮 玩遊戲</button>`:`<button class="primbtn" onclick="startMode('shadow')">▶ 我跟著唸</button>`}
+      <button class="primbtn ghost2" onclick="startBig()">🪧 給他看</button>
+    </div>
+    ${S.band==='kid'?`<div style="text-align:center;margin:0 0 4px"><button class="back" style="display:inline-flex;color:#ec4899" onclick="openStickerBook()">🎉 我的貼紙簿</button></div>`:''}
+    <div class="modehint">👇 或挑練習模式（建議順序：暖身→學習卡→聽力→跟讀→拼句→句型→角色扮演）</div>
     <div class="modes">${modes}</div>
     ${surv.length?`<div class="section-title" style="margin-top:6px">🆘 這關的救命短句</div>${surv.map(o=>phraseItem(sc,o.p,o.i)).join('')}`:''}
     <div class="section-title">📋 全部句子</div>
@@ -504,6 +716,18 @@ function renderDetail(){
     <div>${list.map(o=>phraseItem(sc,o.p,o.i)).join('')}</div>`;
 }
 function setTag(t){curTag=t;renderDetail()}
+let BG=null;
+function startBig(){const it=visPhrases(curScenario);if(!it.length){toast('這關暫無句子');return}BG={items:it,idx:0};drawBig();}
+function drawBig(){
+  const p=BG.items[BG.idx].p;const showHomo=(band().homo||p.survival)&&p.homophone;
+  const inner=`<div class="bigshow">
+    <div class="tello">🙂 把螢幕轉給對方看，或點下方播放給他聽</div>
+    <div class="ben">${p.en}</div><div class="bzh">${p.zh}</div>
+    ${showHomo?`<div class="bhomo">🗣️ ${p.homophone}</div>`:''}
+    <button class="speak" onclick="say(${esc(p.en)})">🔊 播放發音</button></div>`;
+  const foot=`<button class="pbtn ghost" onclick="BG.idx=(BG.idx-1+BG.items.length)%BG.items.length;drawBig()">‹ 上一句</button><button class="pbtn" onclick="BG.idx=(BG.idx+1)%BG.items.length;drawBig()">下一句 ›</button>`;
+  $('#overlayMount').innerHTML=`<div class="overlay"><div class="ovhead"><button class="x" onclick="BG=null;closeOverlay()">✕</button><div class="ovprog"><i style="width:${Math.round((BG.idx+1)/BG.items.length*100)}%"></i></div><div class="cnt">🪧 ${BG.idx+1}/${BG.items.length}</div></div><div class="ovbody">${inner}</div><div class="ovfoot">${foot}</div></div>`;
+}
 function stars(lvl){return '★'.repeat(lvl)+'☆'.repeat(Math.max(0,5-lvl))}
 function phraseItem(sc,p,i){
   const c=S.cards[cardKey(sc.id,i)];const lvl=c?Math.min(5,c.lvl):0;
@@ -603,8 +827,14 @@ function cardTranslate(){
   $('#overlayMount').innerHTML=ovShell(inner,'');
 }
 function makeOptions(p,field){
-  const all=[];SCENARIOS.forEach(sc=>sc.phrases.forEach(x=>all.push(x)));
-  const wrong=shuffle(all.filter(x=>x[field]!==p[field])).slice(0,3);
+  // 優先用「同一情境」的句子當誘答，比較像、比較難猜；不足再用全體補
+  const same=shuffle((curScenario?curScenario.phrases:[]).filter(x=>x[field]&&x[field]!==p[field]));
+  const wrong=same.slice(0,3);
+  if(wrong.length<3){
+    const all=[];SCENARIOS.forEach(sc=>sc.phrases.forEach(x=>all.push(x)));
+    const extra=shuffle(all.filter(x=>x[field]&&x[field]!==p[field]&&!wrong.includes(x))).slice(0,3-wrong.length);
+    wrong.push(...extra);
+  }
   return shuffle([{text:p[field],correct:true},...wrong.map(w=>({text:w[field],correct:false}))]);
 }
 function pickOpt(el,correct){
@@ -744,7 +974,7 @@ function drawRoleplay(){
   let foot='',bottom='';
   if(RP.step>=resolved.length){foot=`<button class="pbtn ghost" onclick="closeOverlay()">完成</button><button class="pbtn" onclick="RP.step=0;RP.resolved=RP.d.lines.map(pickLine);drawRoleplay()">再玩一次</button>`;}
   else{const nxt=resolved[RP.step];
-    if(nxt.who==='you'){bottom=`<div class="roleask">👉 換你了（你扮演：${d.youRole}）— 試著說出來，再看解答</div>`;foot=`<button class="pbtn ghost" onclick="say(${esc(nxt.en)})">🔊 提示</button><button class="pbtn" onclick="rpAdvance()">看解答 ›</button>`;}
+    if(nxt.who==='you'){bottom=`<div class="roleask">👉 換你了（你扮演：${d.youRole}）— ${recSupported?'先點麥克風把這句「說出來」，再看解答':'先自己念出來，再看解答'}</div>${recSupported?`<div style="text-align:center;margin-top:10px"><button class="mic" style="width:66px;height:66px;font-size:27px;margin:0 auto" id="rpMic" onclick="rpSpeak()">🎤</button><div class="heard" id="rpHeard">點麥克風開口說</div><div id="rpFb"></div></div>`:''}`;foot=`<button class="pbtn ghost" onclick="say(${esc(nxt.en)})">🔊 提示</button><button class="pbtn" onclick="rpAdvance()">看解答 ›</button>`;}
     else{bottom=`<div class="roleask">🗣️ ${d.npcRole} 說話中…</div>`;foot=`<button class="pbtn" onclick="rpAdvance()">繼續 ›</button>`;}}
   const inner=`<div style="text-align:center;margin-bottom:6px"><b>${d.title}</b><div class="qsub">你：${d.youRole} ｜ 對方：${d.npcRole}</div></div><div class="chat">${chat||'<div class="qsub">點「繼續」展開對話</div>'}</div>${bottom}`;
   $('#overlayMount').innerHTML=`<div class="overlay"><div class="ovhead"><button class="x" onclick="closeOverlay()">✕</button><div class="ovprog"><i style="width:${Math.round(RP.step/resolved.length*100)}%"></i></div><div class="cnt">🎭</div></div><div class="ovbody">${inner}</div><div class="ovfoot">${foot}</div></div>`;
@@ -752,6 +982,24 @@ function drawRoleplay(){
   const body=$('.chat');if(body)body.scrollTop=body.scrollHeight;
 }
 function rpAdvance(){const l=RP.resolved[RP.step];RP.step++;if(l.who==='you'){countStudy();saveS();}drawRoleplay();}
+function rpSpeak(){
+  if(!recSupported)return;const R=window.SpeechRecognition||window.webkitSpeechRecognition;
+  const rr=new R();rr.lang='en-US';rr.interimResults=false;
+  const mic=$('#rpMic');if(mic)mic.classList.add('rec');
+  const hb=$('#rpHeard');if(hb)hb.textContent='🔴 聽你說…請開口';
+  rr.onresult=e=>{
+    const said=e.results[0][0].transcript;const nxt=RP.resolved[RP.step];
+    const tw=normalize(nxt.en).split(' '),hw=new Set(normalize(said).split(' '));
+    let hit=0;tw.forEach(w=>{if(hw.has(w))hit++});const pct=Math.round(hit/tw.length*100);
+    const marked=nxt.en.split(/(\s+)/).map(t=>{const w=normalize(t);if(!w)return t;return hw.has(w)?`<span class="wok">${t}</span>`:`<span class="wmiss">${t}</span>`;}).join('');
+    if($('#rpHeard'))$('#rpHeard').innerHTML=`你說：<b>${said}</b>`;
+    if($('#rpFb'))$('#rpFb').innerHTML=`<div class="shadowline" style="font-size:1.05rem">${marked}</div><div class="qsub">${pct>=70?'很完整！點「看解答」繼續 👍':'紅字沒講到，可再說一次，或看解答'}</div>`;
+    if(pct>=70&&$('#rpMic'))heart($('#rpMic'));
+  };
+  rr.onerror=()=>{if($('#rpHeard'))$('#rpHeard').textContent='沒聽清楚，再試一次';};
+  rr.onend=()=>{const m=$('#rpMic');if(m)m.classList.remove('rec');};
+  try{rr.start();}catch(e){}
+}
 
 let RS=null;
 function startRespond(){
@@ -850,7 +1098,7 @@ function renderProfile(){
   $('#progSummary').innerHTML=`
     <div class="setrow"><div class="lab"><b>已學過</b><small>目前模式可見的句子</small></div><b style="color:var(--sky)">${seen} / ${tot}</b></div>
     <div class="setrow"><div class="lab"><b>已精熟 ★★★★★</b></div><b style="color:var(--gold)">${mastered}</b></div>
-    <div class="setrow"><div class="lab"><b>收藏句數</b></div><b>${S.favs.length}</b></div>
+    <div class="setrow" onclick="go('fav')" style="cursor:pointer"><div class="lab"><b>⭐ 我的收藏</b></div><b>${S.favs.length} ›</b></div>
     <div class="setrow"><div class="lab"><b>連續打卡</b></div><b style="color:var(--bad)">${streak()} 天 🔥</b></div>`;
 }
 function setBand(k){S.band=k;S.big=BANDS[k].big;saveS();applyBig();renderProfile();toast(BANDS[k].emoji+' 已切換到「'+BANDS[k].name+'」模式');}
