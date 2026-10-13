@@ -1,0 +1,14 @@
+/* 由 packages/lively/sync_lively.py 產生，請勿手改（改 apps.json 再重跑）。
+   911_campus-english｜主題色相來源 #4f9a5a｜engine=conv｜level=low */
+:root{--lv-engine:conv;--lv-level:low}
+html:not([data-theme="dark"]),html:not([data-theme="dark"]) body{
+  --lv-btn:#55BE64;--lv-btn-d:#3F8D4A;--lv-ink:#143D1A;--lv-acc:#2E7A39;
+  --lv-soft:#E8F7EA;--lv-soft2:#CEE8D2;
+}
+html[data-theme="dark"],html[data-theme="dark"] body{
+  --lv-btn:#55BE64;--lv-btn-d:#3F8D4A;--lv-ink:#143D1A;--lv-acc:#59C068;
+  --lv-soft:#254129;--lv-soft2:#37623D;
+}
+@media (prefers-color-scheme:dark){html:not([data-theme]),html:not([data-theme]) body{
+  --lv-acc:#59C068;--lv-soft:#254129;--lv-soft2:#37623D;
+}}
